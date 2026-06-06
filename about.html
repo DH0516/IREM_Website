@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <link rel="icon" href="public/media/images/IREM_Logo.png" />
+    <title>About — IREM</title>
+    <meta
+      name="description"
+      content="Learn about IREM — a Montréal-based team of musicians and engineers building software, fabricating prototypes, and conducting acoustic research."
+    />
+    <meta property="og:title" content="About — IREM" />
+    <meta
+      property="og:description"
+      content="Engineers by Curiosity, Builders by Trade."
+    />
+    <meta property="og:url" content="https://dh0516.github.io/IREM_Website/about.html" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <header class="navbar-wrapper">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img
+            src="public/media/images/IREM_Logo.png"
+            alt="IREM Logo"
+            width="24"
+            height="24"
+          />
+          <div class="logo-copy">
+            <span class="logo-name">IREM</span>
+            <span class="logo-tagline"
+              >Institut de Recherche et Exploration Musicale</span
+            >
+          </div>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Home</a>
+          <a href="about.html" data-i18n="about">About</a>
+          <a href="services.html" data-i18n="services">Services</a>
+          <a href="portfolio.html" data-i18n="projects">Projects</a>
+          <a href="contact.html" data-i18n="contact">Contact</a>
+          <div class="language_select_wrap">
+            <select
+              id="lang-select"
+              class="language_select"
+              aria-label="Language selector"
+            >
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="nav-controls">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            ☾
+          </button>
+          <button id="burger" class="burger" type="button" aria-label="Menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ── MAIN ───────────────────────────────────────────── -->
+    <main>
+      <div class="about-page">
+        <!-- Hero -->
+        <section class="about-hero">
+          <img
+            src="public/media/images/display-images-webp/10-woodwind-maker-workbench.webp"
+            alt="Engineering workshop"
+            class="about-hero-bg"
+            width="1600"
+            height="900"
+          />
+          <div class="about-hero-overlay">
+            <div class="about-hero-content">
+              <h1 class="about-hero-title">
+                Engineers by Curiosity,<br />Builders by Trade.
+              </h1>
+              <p class="about-hero-description">
+                We merge computational thinking with physical craft — from lines
+                of code to layers of filament.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Our Story -->
+        <section class="story-section">
+          <div class="story-container">
+            <div class="story-content">
+              <h2 class="philosophy-title capitalize">our story</h2>
+              <p class="story-text">
+                Founded in Montréal in 2025, the Institut de Recherche et
+                Exploration Musicale (IREM) was born at the crossroads of music,
+                engineering, and fabrication. The idea had been building for
+                years — born from the frustration of watching great creative and
+                technical problems go unsolved because no one was willing to
+                work across both worlds at once. In late 2024, a grant from the
+                Conseil des arts et des lettres du Québec (CALQ) gave the team
+                the validation and momentum to make it real.
+              </p>
+              <p class="story-text">
+                Today, IREM operates as a Canadian engineering and R&amp;D
+                organization, delivering software platforms, 3D-fabricated
+                prototypes, and acoustic research to clients and institutional
+                partners. Our philosophy remains unchanged: if it doesn't work
+                as well as it sounds, it doesn't ship.
+              </p>
+              <h3 class="story-label capitalize">4 AXES OF SERVICES</h3>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-number">01</div>
+                  <div class="stat-label">App Development</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">02</div>
+                  <div class="stat-label">3D Prototyping</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">03</div>
+                  <div class="stat-label">Additive Manufacturing</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">04</div>
+                  <div class="stat-label">Acoustic R&amp;D</div>
+                </div>
+              </div>
+            </div>
+            <div class="story-image">
+              <img src="public/media/images/IREM_Logo.png" alt="IREM logo" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Philosophy -->
+        <section class="philosophy-section">
+          <div class="philosophy-container">
+            <h2 class="philosophy-title capitalize">Our Philosophy</h2>
+            <div class="philosophy-grid">
+              <div class="philosophy-card">
+                <div class="philosophy-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="philosophy-card-title">Engineering Precision</h3>
+                <p class="philosophy-card-text">
+                  We build with intention. Whether writing DSP algorithms or
+                  designing a 3D-printed wind instrument, every decision is
+                  grounded in technical rigor.
+                </p>
+              </div>
+
+              <div class="philosophy-card">
+                <div class="philosophy-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 18V5l12-2v13M9 18c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"
+                    />
+                    <circle cx="18" cy="16" r="3" />
+                  </svg>
+                </div>
+                <h3 class="philosophy-card-title">Creative Depth</h3>
+                <p class="philosophy-card-text">
+                  Technology is most powerful when it serves human expression.
+                  Our projects often live at the crossroads of science and art.
+                </p>
+              </div>
+
+              <div class="philosophy-card">
+                <div class="philosophy-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                  </svg>
+                </div>
+                <h3 class="philosophy-card-title">Research-Driven</h3>
+                <p class="philosophy-card-text">
+                  We don't just ship products; we study the science behind them.
+                  Our R&amp;D informs everything we make.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to build something real?</h2>
+            <p class="cta-description">
+              Whether you need a software partner, a fabrication studio, or a
+              research collaborator, our team is ready to listen.
+            </p>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>© 2026 IREM. All rights reserved.</p>
+        <p data-contact="address">Montréal, Québec, Canada</p>
+        <p>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <span class="footer-separator">|</span>
+          <a href="terms-of-service.html" class="footer-link"
+            >Terms of Service</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

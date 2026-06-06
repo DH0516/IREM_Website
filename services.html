@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <link rel="icon" href="public/media/images/IREM_Logo.png" />
+    <title>Services — IREM</title>
+    <meta
+      name="description"
+      content="IREM offers app development, 3D prototyping, additive manufacturing, and acoustic R&D services in Montréal, Canada."
+    />
+    <meta property="og:title" content="Services — IREM" />
+    <meta
+      property="og:description"
+      content="End-to-End Engineering, From Screen to Physical Form."
+    />
+    <meta property="og:url" content="https://dh0516.github.io/IREM_Website/services.html" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <header class="navbar-wrapper">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img
+            src="public/media/images/IREM_Logo.png"
+            alt="IREM Logo"
+            width="24"
+            height="24"
+          />
+          <div class="logo-copy">
+            <span class="logo-name">IREM</span>
+            <span class="logo-tagline"
+              >Institut de Recherche et Exploration Musicale</span
+            >
+          </div>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Home</a>
+          <a href="about.html" data-i18n="about">About</a>
+          <a href="services.html" data-i18n="services">Services</a>
+          <a href="portfolio.html" data-i18n="projects">Projects</a>
+          <a href="contact.html" data-i18n="contact">Contact</a>
+          <div class="language_select_wrap">
+            <select
+              id="lang-select"
+              class="language_select"
+              aria-label="Language selector"
+            >
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="nav-controls">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            ☾
+          </button>
+          <button id="burger" class="burger" type="button" aria-label="Menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ── MAIN ───────────────────────────────────────────── -->
+    <main>
+      <div class="services-page">
+        <!-- Hero -->
+        <section class="services-hero">
+          <div class="services-hero-container">
+            <h1 class="services-hero-title">
+              End-to-End Engineering, From Screen to Physical Form.
+            </h1>
+            <p class="services-hero-description">
+              We deliver software, hardware, and research solutions for clients
+              who demand precision at every layer.
+            </p>
+          </div>
+        </section>
+
+        <!-- Capabilities -->
+        <section class="capabilities-section">
+          <div class="capabilities-container">
+            <div class="capabilities-header">
+              <h2 class="capabilities-title">Core Capabilities</h2>
+            </div>
+
+            <div class="capabilities-grid">
+              <!-- App Development -->
+              <div class="capability-card">
+                <div class="cap-media">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="public/media/images/photos-webp/music-app.webp"
+                        alt="IREM music-practice app"
+                        class="img-contain"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/display-images-webp/16-audio-waveform-visualization.webp"
+                        alt="Audio waveform / signal-processing visualization"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Previous image"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Next image"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                </div>
+                <div class="capability-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                    />
+                  </svg>
+                </div>
+                <div class="capability-content">
+                  <h3 class="capability-title">App Development</h3>
+                  <p class="capability-description">
+                    Cross-platform application development for web, mobile, and
+                    specialized platforms. We build performant, modular software
+                    with a focus on signal processing, data visualization, and
+                    user experience.
+                  </p>
+                  <div class="capability-footer">
+                    <span class="capability-tag">SOFTWARE</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3D Prototyping -->
+              <div class="capability-card">
+                <div class="cap-media">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="public/media/images/photos-webp/Accessibility%20Winds%20Project2.webp"
+                        alt="CAD model of an adaptive recorder"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/display-images-webp/17-trumpet-cad-workstation.webp"
+                        alt="CAD workstation modeling a brass instrument"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Previous image"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Next image"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                </div>
+                <div class="capability-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                  </svg>
+                </div>
+                <div class="capability-content">
+                  <h3 class="capability-title">3D Prototyping</h3>
+                  <p class="capability-description">
+                    From concept sketches to production-ready models using
+                    Blender, Autodesk Fusion, and professional CAD tooling. We
+                    prototype enclosures, instruments, mechanical parts, and
+                    custom objects.
+                  </p>
+                  <div class="capability-footer">
+                    <span class="capability-tag">DESIGN</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Additive Manufacturing -->
+              <div class="capability-card">
+                <div class="cap-media">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="public/media/images/photos-webp/3D%20printing.webp"
+                        alt="A recorder being 3D-printed"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/display-images-webp/11-audio-lab-desk-with-recorder-prototype.webp"
+                        alt="Lab desk with a 3D-printed recorder prototype"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Previous image"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Next image"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                </div>
+                <div class="capability-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <rect x="2" y="6" width="20" height="12" rx="2" />
+                    <circle cx="7" cy="12" r="2" />
+                    <circle cx="17" cy="12" r="2" />
+                  </svg>
+                </div>
+                <div class="capability-content">
+                  <h3 class="capability-title">Additive Manufacturing</h3>
+                  <p class="capability-description">
+                    FDM and SLS-based fabrication for rapid prototyping and
+                    functional end-use components. We handle material selection,
+                    print optimization, and post-processing for client and
+                    research applications.
+                  </p>
+                  <div class="capability-footer">
+                    <span class="capability-tag">FABRICATION</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Acoustic R&D -->
+              <div class="capability-card">
+                <div class="cap-media">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="public/media/images/photos-webp/acoustics-research.webp"
+                        alt="Acoustic analysis software — waveform and FFT"
+                        class="img-contain"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/display-images-webp/07-acoustic-analysis-workstation.webp"
+                        alt="Acoustic analysis workstation"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Previous image"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Next image"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                </div>
+                <div class="capability-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                  </svg>
+                </div>
+                <div class="capability-content">
+                  <h3 class="capability-title">Acoustic R&amp;D</h3>
+                  <p class="capability-description">
+                    Applied research spanning acoustics, musical instrument
+                    science, DSP, and sonic technology. We partner with academic
+                    institutions and private clients on experimental and
+                    development projects.
+                  </p>
+                  <div class="capability-footer">
+                    <span class="capability-tag">RESEARCH</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="services-cta-section">
+          <div class="services-cta-content">
+            <h2 class="services-cta-title">Ready to elevate your project?</h2>
+            <p class="services-cta-description">
+              We offer initial consultations for new clients and research
+              partnerships.
+            </p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>© 2026 IREM. All rights reserved.</p>
+        <p data-contact="address">Montréal, Québec, Canada</p>
+        <p>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <span class="footer-separator">|</span>
+          <a href="terms-of-service.html" class="footer-link"
+            >Terms of Service</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

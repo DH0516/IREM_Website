@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <link rel="icon" href="public/media/images/IREM_Logo.png" />
+    <title>Contact — IREM</title>
+    <meta
+      name="description"
+      content="Contact IREM — get in touch to discuss your software, fabrication, or acoustic research project. Based in Montréal, Québec."
+    />
+    <meta property="og:title" content="Contact — IREM" />
+    <meta property="og:description" content="Let's build something together." />
+    <meta property="og:url" content="https://dh0516.github.io/IREM_Website/contact.html" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <header class="navbar-wrapper">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img
+            src="public/media/images/IREM_Logo.png"
+            alt="IREM Logo"
+            width="24"
+            height="24"
+          />
+          <div class="logo-copy">
+            <span class="logo-name">IREM</span>
+            <span class="logo-tagline"
+              >Institut de Recherche et Exploration Musicale</span
+            >
+          </div>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Home</a>
+          <a href="about.html" data-i18n="about">About</a>
+          <a href="services.html" data-i18n="services">Services</a>
+          <a href="portfolio.html" data-i18n="projects">Projects</a>
+          <a href="contact.html" data-i18n="contact">Contact</a>
+          <div class="language_select_wrap">
+            <select
+              id="lang-select"
+              class="language_select"
+              aria-label="Language selector"
+            >
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="nav-controls">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            ☾
+          </button>
+          <button id="burger" class="burger" type="button" aria-label="Menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ── MAIN ───────────────────────────────────────────── -->
+    <main>
+      <div class="contact-page">
+        <div class="contact-container">
+          <!-- Invitation -->
+          <div class="contact-form-section">
+            <h1 class="contact-title">Let's build something together.</h1>
+            <p class="contact-description">
+              Tell us about your project — software, fabrication, or acoustic
+              research. The best way to reach us is by email, and our team
+              typically responds within 2 business days.
+            </p>
+            <p class="contact-description">
+              When you get in touch, it helps to include a short description of
+              what you're building, your organization (if any), and your
+              timeline.
+            </p>
+            <a href="#" data-contact="email-button" class="cta-button"
+              >Email Us →</a
+            >
+          </div>
+
+          <!-- Info -->
+          <div class="contact-info-section">
+            <div class="contact-studios">
+              <h3 class="contact-studios-title">OUR STUDIO</h3>
+
+              <div class="studio-card">
+                <div class="studio-icon-wrapper">
+                  <div class="studio-icon">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#4F46E5"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                      />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="studio-info">
+                  <h4 class="studio-name">Montréal HQ</h4>
+                  <p class="studio-address" data-contact="address">
+                    Montréal, Québec, Canada
+                  </p>
+                  <p class="studio-email">
+                    General contact email:
+                    <span data-contact="email"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>© 2026 IREM. All rights reserved.</p>
+        <p data-contact="address">Montréal, Québec, Canada</p>
+        <p>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <span class="footer-separator">|</span>
+          <a href="terms-of-service.html" class="footer-link"
+            >Terms of Service</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

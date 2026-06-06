@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <link rel="icon" href="public/media/images/IREM_Logo.png" />
+    <title>IREM — Institut de Recherche et Exploration Musicale</title>
+    <meta
+      name="description"
+      content="IREM — Institut de Recherche et Exploration Musicale. Software development, 3D prototyping, additive manufacturing, and acoustic R&D in Montréal."
+    />
+    <meta property="og:title" content="IREM" />
+    <meta
+      property="og:description"
+      content="Where Musical Exploration is Digitally and Physically Powered."
+    />
+    <meta property="og:url" content="https://dh0516.github.io/IREM_Website/" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <header class="navbar-wrapper">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img
+            src="public/media/images/IREM_Logo.png"
+            alt="IREM Logo"
+            width="24"
+            height="24"
+          />
+          <div class="logo-copy">
+            <span class="logo-name">IREM</span>
+            <span class="logo-tagline"
+              >Institut de Recherche et Exploration Musicale</span
+            >
+          </div>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Home</a>
+          <a href="about.html" data-i18n="about">About</a>
+          <a href="services.html" data-i18n="services">Services</a>
+          <a href="portfolio.html" data-i18n="projects">Projects</a>
+          <a href="contact.html" data-i18n="contact">Contact</a>
+          <div class="language_select_wrap">
+            <select
+              id="lang-select"
+              class="language_select"
+              aria-label="Language selector"
+            >
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="nav-controls">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            ☾
+          </button>
+          <button id="burger" class="burger" type="button" aria-label="Menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ── MAIN ───────────────────────────────────────────── -->
+    <main>
+      <div class="home-page">
+        <!-- Hero -->
+        <section class="hero-section">
+          <div class="hero-container">
+            <div class="hero-content">
+              <h1 class="hero-title">
+                Where Musical Exploration is Digitally and Physically Powered.
+              </h1>
+              <p class="hero-description">
+                From precision apps to 3D-fabricated instruments — we engineer
+                what others only imagine.
+              </p>
+            </div>
+            <div class="hero-image">
+              <img
+                src="public/media/images/display-images-webp/09-instrument-design-workshop.webp"
+                alt="IREM engineering studio"
+                width="1600"
+                height="900"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Who We Are -->
+        <section class="who-we-are-section">
+          <div class="section-container">
+            <h2 class="section-title-dark capitalize">who we are</h2>
+            <p class="section-description">
+              A Montréal-based team of musicians and engineers pushing the
+              boundaries of what technology can create. We build software
+              platforms, fabricate physical prototypes, and conduct research at
+              the frontier of acoustic and musical science.
+            </p>
+            <a href="about.html" class="btn-link">More About Us →</a>
+          </div>
+        </section>
+
+        <!-- Key Expertise -->
+        <section class="expertise-section">
+          <div class="section-container">
+            <h2 class="section-title-dark capitalize">Key Expertise</h2>
+            <div class="expertise-grid">
+              <div class="expertise-card">
+                <div class="expertise-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="M8 2v4M16 2v4" />
+                  </svg>
+                </div>
+                <h3 class="expertise-title">App Development</h3>
+                <p class="expertise-description">
+                  Cross-platform web and mobile applications with a focus on
+                  performance, modularity, and signal processing.
+                </p>
+              </div>
+
+              <div class="expertise-card">
+                <div class="expertise-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                      d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
+                    />
+                  </svg>
+                </div>
+                <h3 class="expertise-title">3D Prototyping</h3>
+                <p class="expertise-description">
+                  Concept-to-model design using Blender, Autodesk Fusion, and
+                  professional CAD pipelines.
+                </p>
+              </div>
+
+              <div class="expertise-card">
+                <div class="expertise-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                </div>
+                <h3 class="expertise-title">Additive Manufacturing</h3>
+                <p class="expertise-description">
+                  FDM and SLS fabrication for rapid prototyping and functional
+                  end-use parts.
+                </p>
+              </div>
+
+              <div class="expertise-card">
+                <div class="expertise-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                </div>
+                <h3 class="expertise-title">Acoustic R&amp;D</h3>
+                <p class="expertise-description">
+                  Research and development spanning acoustics, musical
+                  instrument science, and digital signal processing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>© 2026 IREM. All rights reserved.</p>
+        <p data-contact="address">Montréal, Québec, Canada</p>
+        <p>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <span class="footer-separator">|</span>
+          <a href="terms-of-service.html" class="footer-link"
+            >Terms of Service</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

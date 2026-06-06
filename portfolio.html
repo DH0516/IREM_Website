@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <link rel="icon" href="public/media/images/IREM_Logo.png" />
+    <title>Projects — IREM</title>
+    <meta
+      name="description"
+      content="Explore IREM's active projects: DSP tuner apps, melody generation platforms, 3D woodwind instruments, and acoustic research."
+    />
+    <meta property="og:title" content="Projects — IREM" />
+    <meta
+      property="og:description"
+      content="Active Projects &amp; Case Studies — from DSP platforms to historically-informed 3D instruments."
+    />
+    <meta property="og:url" content="https://dh0516.github.io/IREM_Website/portfolio.html" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <header class="navbar-wrapper">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img
+            src="public/media/images/IREM_Logo.png"
+            alt="IREM Logo"
+            width="24"
+            height="24"
+          />
+          <div class="logo-copy">
+            <span class="logo-name">IREM</span>
+            <span class="logo-tagline"
+              >Institut de Recherche et Exploration Musicale</span
+            >
+          </div>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Home</a>
+          <a href="about.html" data-i18n="about">About</a>
+          <a href="services.html" data-i18n="services">Services</a>
+          <a href="portfolio.html" data-i18n="projects">Projects</a>
+          <a href="contact.html" data-i18n="contact">Contact</a>
+          <div class="language_select_wrap">
+            <select
+              id="lang-select"
+              class="language_select"
+              aria-label="Language selector"
+            >
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="nav-controls">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            ☾
+          </button>
+          <button id="burger" class="burger" type="button" aria-label="Menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ── MAIN ───────────────────────────────────────────── -->
+    <main>
+      <div class="portfolio-page">
+        <!-- Hero -->
+        <section class="portfolio-hero">
+          <div class="portfolio-hero-container">
+            <h1 class="portfolio-hero-title">
+              Active Projects &amp; Case Studies
+            </h1>
+            <p class="portfolio-hero-description">
+              A look at what we're currently building — from DSP platforms to
+              historically-informed 3D instruments.
+            </p>
+          </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="portfolio-grid-section">
+          <div class="portfolio-container">
+            <h2 class="portfolio-section-title">Projects</h2>
+            <div class="portfolio-grid">
+              <!-- Project 1 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="public/media/images/photos-webp/tuner2.webp"
+                        alt="IREM Tuner app — tuning needle screen"
+                        class="portfolio-project-image img-contain"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/photos-webp/tuner1.webp"
+                        alt="IREM Tuner app — file upload and waveform"
+                        class="portfolio-project-image img-contain"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/display-images-webp/13-smartphone-pitch-tuner-app.webp"
+                        alt="Smartphone pitch-tuner app concept"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Previous image"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Next image"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">SOFTWARE / DSP</div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">Advanced Tuner App</h3>
+                  <p class="portfolio-project-description">
+                    A modular, cross-platform pitch analysis tool built on
+                    WebAudio DSP. The application analyzes real-time frequency
+                    data on web and mobile using custom algorithms for accurate
+                    pitch detection across a wide range of instruments and
+                    tuning systems.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    View Case Study →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      The Advanced Tuner App is a modular pitch detection
+                      platform built on the WebAudio API, designed to run
+                      natively in web browsers and on mobile devices without
+                      requiring a native install.
+                    </p>
+                    <p>
+                      At its core, the system uses custom DSP algorithms to
+                      analyze incoming audio frequency data in real time and
+                      identify pitch with high accuracy across a broad range of
+                      instruments and tuning systems.
+                    </p>
+                    <p>
+                      The modular architecture allows individual detection and
+                      analysis components to be developed, tested, and extended
+                      independently — making it adaptable for both
+                      general-purpose tuning and specialized musical research
+                      applications.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <img
+                    src="public/media/images/display-images-webp/15-digital-sheet-music-workstation.webp"
+                    alt="Melody Generation Platform"
+                    class="portfolio-project-image"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                  <div class="portfolio-project-tag">
+                    SOFTWARE / CLIENT PROJECT
+                  </div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">
+                    Melody Generation Platform
+                  </h3>
+                  <p class="portfolio-project-description">
+                    A client-backed web and mobile application that generates
+                    melodies using proprietary algorithmic composition. Details
+                    cannot be released due to a non-disclosure agreement.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    View Case Study →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      This is a client-backed web and mobile application
+                      centered on algorithmic melody generation.
+                    </p>
+                    <p>
+                      The platform was developed in partnership with a private
+                      client and is built on proprietary compositional
+                      algorithms.
+                    </p>
+                    <p>
+                      Further details cannot be released due to a non-disclosure
+                      agreement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="public/media/images/photos-webp/20250123_000906.webp"
+                        alt="Two 3D-printed baroque recorders"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/photos-webp/20250123_000826.webp"
+                        alt="A 3D-printed baroque recorder"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/photos-webp/20250128_140805.webp"
+                        alt="3D-printed recorders beside the resin printer"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/photos-webp/20250128_140812.webp"
+                        alt="Close-up of printed recorder tone holes"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/photos-webp/20250127_013949.webp"
+                        alt="Holding a finished 3D-printed recorder"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/photos-webp/3d-mouthpiece.webp"
+                        alt="3D-printed recorder mouthpiece / head-joint pieces"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/photos-webp/3dwoodwind-1.webp"
+                        alt="Two-tone 3D-printed recorder held in hand"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/display-images-webp/01-historical-woodwind-workbench.webp"
+                        alt="Historical woodwind on a workbench"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/display-images-webp/14-historical-flute-display-case.webp"
+                        alt="Historical flute in a display case"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Previous image"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Next image"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">
+                    FABRICATION / ACOUSTIC RESEARCH
+                  </div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">3D Woodwind Creations</h3>
+                  <p class="portfolio-project-description">
+                    Drawing on historical musicology and acoustic science, we
+                    are reproducing the sonic character of historical woodwind
+                    instruments without requiring access to museum or
+                    private-collection originals. Each recreation undergoes
+                    rigorous acoustic verification and experimental testing.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    View Case Study →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Many historical woodwind instruments exist only in museum
+                      collections or private hands — physically inaccessible for
+                      study, performance, or reproduction.
+                    </p>
+                    <p>
+                      This project applies historical musicology and acoustic
+                      science to recreate the sonic profiles of these
+                      instruments using 3D design and additive manufacturing,
+                      without requiring access to the originals.
+                    </p>
+                    <p>
+                      Each reproduction is subjected to rigorous acoustic
+                      verification and experimental testing to validate its
+                      fidelity to historical references.
+                    </p>
+                    <p>
+                      The goal is to make the sound of the past accessible — to
+                      researchers, educators, and performers alike.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 4 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="public/media/images/photos-webp/Accessibility%20Winds%20Project.webp"
+                        alt="The adapted recorder being played"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/photos-webp/Accessibility%20Winds%20Project2.webp"
+                        alt="CAD design of the adaptive recorder keys"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Previous image"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Next image"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">
+                    FABRICATION / COLLABORATION
+                  </div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">
+                    Accessibility Winds Project
+                  </h3>
+                  <p class="portfolio-project-description">
+                    In collaboration with the Music Education faculty at a
+                    Canadian university partner, IREM is developing a 3D-printed
+                    soprano recorder tailored to the physical accessibility
+                    needs of a student. This project bridges adaptive design,
+                    additive manufacturing, and music education.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    View Case Study →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      This project was initiated to address a specific
+                      accessibility need: a student requiring a wind instrument
+                      adapted to their physical capabilities.
+                    </p>
+                    <p>
+                      In collaboration with the Music Education faculty at a
+                      Canadian university partner, IREM is designing and
+                      fabricating a 3D-printed soprano recorder tailored to that
+                      student's needs.
+                    </p>
+                    <p>
+                      The project draws on additive manufacturing's ability to
+                      rapidly iterate custom geometries — adjusting key
+                      placement, instrument weight, and ergonomics in ways that
+                      traditional manufacturing cannot.
+                    </p>
+                    <p>
+                      It sits at the intersection of inclusive design, music
+                      education, and applied fabrication research.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 5 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="public/media/images/photos-webp/materials-reseasrch-recorders.webp"
+                        alt="Recorders printed in different materials"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/display-images-webp/05-instrument-cases-and-accessories.webp"
+                        alt="Instrument materials and accessories"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Previous image"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Next image"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">
+                    RESEARCH / IN PREPARATION
+                  </div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">
+                    3D Printing Materials in Acoustic Research
+                  </h3>
+                  <p class="portfolio-project-description">
+                    A study being prepared to validate the acoustic quality and
+                    production viability of additive manufacturing in wind
+                    instrument creation. The research aims to establish baseline
+                    data for FDM and SLS materials as substitutes in acoustic
+                    fabrication.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    View Case Study →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      This study is being prepared to address a foundational
+                      question in acoustic fabrication: can additive
+                      manufacturing produce wind instruments with acoustic
+                      properties comparable to those made from traditional
+                      materials?
+                    </p>
+                    <p>
+                      The research will systematically evaluate FDM and
+                      SLS-printed specimens against established acoustic
+                      benchmarks, examining factors such as wall resonance,
+                      internal surface finish, air-tightness, and tonal
+                      response.
+                    </p>
+                    <p>
+                      The findings are intended to contribute baseline data to
+                      the broader field of acoustics and to inform IREM's own
+                      fabrication practices going forward.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 6 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <img
+                    src="public/media/images/photos-webp/3d-flower.webp"
+                    alt="3D Printed Flower"
+                    class="portfolio-project-image"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                  <div class="portfolio-project-tag">
+                    FABRICATION / EXPLORATION
+                  </div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">3D Printed Flower</h3>
+                  <p class="portfolio-project-description">
+                    A decorative flower printed in clear resin — an exploration of
+                    fine detail, translucency, and organic geometry that pushes our
+                    additive manufacturing beyond instrument work.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    View Case Study →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Not every project is an instrument. This piece was an
+                      exercise in printing delicate, organic forms — thin petals,
+                      curved stems, and translucent surfaces that are difficult to
+                      reproduce cleanly with additive manufacturing.
+                    </p>
+                    <p>
+                      Working in clear resin let us study how light passes through
+                      printed geometry and how fine features hold up at small
+                      scale — lessons that carry directly back into our precision
+                      instrument and component work.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 7 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="public/media/images/photos-webp/reed-study2.webp"
+                        alt="3D-printed oboe reed shaper"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="public/media/images/photos-webp/reed-study.webp"
+                        alt="Finished oboe reeds shaped with the printed tool"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Previous image"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Next image"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">FABRICATION / TOOLING</div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">
+                    3D Printed Oboe Reed Shaper
+                  </h3>
+                  <p class="portfolio-project-description">
+                    A custom 3D-printed shaper that forms oboe reed cane to a
+                    precise profile — bringing a traditionally expensive,
+                    hard-to-source tool within reach through additive
+                    manufacturing.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    View Case Study →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Oboists shape their own reeds, and the shaper that defines a
+                      reed's profile is a precise — and often costly — piece of
+                      tooling.
+                    </p>
+                    <p>
+                      IREM designed and 3D-printed a shaper that sets the reed
+                      blank's profile, making it possible to experiment with reed
+                      geometry and study how small changes affect response and
+                      tone.
+                    </p>
+                    <p>
+                      It's a small tool with an outsized impact: faster iteration,
+                      lower cost, and a direct bridge between fabrication and
+                      playing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="portfolio-cta-section">
+          <div class="portfolio-cta-content">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#4F46E5"
+              stroke-width="2"
+              class="portfolio-cta-icon"
+            >
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+              />
+            </svg>
+            <h2 class="portfolio-cta-title">Have a technical challenge?</h2>
+            <p class="portfolio-cta-description">
+              Our team is ready to discuss custom engineering and research
+              projects.
+            </p>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>© 2026 IREM. All rights reserved.</p>
+        <p data-contact="address">Montréal, Québec, Canada</p>
+        <p>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <span class="footer-separator">|</span>
+          <a href="terms-of-service.html" class="footer-link"
+            >Terms of Service</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+  </body>
+</html>

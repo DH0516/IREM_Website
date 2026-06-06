@@ -1,0 +1,74 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Builds
+build/
+dist/
+android/app/build/
+ios/build/
+ios/DerivedData/
+
+# Environnements
+.env
+.env.*
+firebase-key.json
+google-services.json
+GoogleService-Info.plist
+
+# React Native / Expo
+.expo/
+.expo-shared/
+metro-cache/
+*.jsbundle
+*.map
+
+# Client
+Client/build/
+Client/dist/
+
+# Serveur
+Serveur/build/
+Serveur/dist/
+Serveur/lib/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Android
+.gradle/
+local.properties
+*.keystore
+!debug.keystore
+.cxx/
+*.iml
+*.hprof
+
+# Xcode
+xcuserdata/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.xcuserstate
+
+# Testing / Logs
+coverage/
+logs/
+*.log
+
+# Yarn v2+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
