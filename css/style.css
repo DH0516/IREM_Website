@@ -319,6 +319,13 @@ select {
   margin: 0 0 2rem 0;
 }
 
+.home-link-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
 .btn-link {
   display: inline-flex;
   align-items: center;
@@ -534,6 +541,17 @@ select {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.story-logo-slideshow {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.fade-slideshow.story-logo-slideshow > img {
+  object-fit: contain;
+  background: #ffffff;
+  padding: 1rem;
 }
 
 .philosophy-section {
@@ -1250,6 +1268,28 @@ select {
   margin: 0.25rem 0 0;
 }
 
+.contact-location-figure {
+  margin: 0;
+  background: #fafafa;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 18px 40px -24px rgba(15, 23, 42, 0.28);
+}
+
+.contact-location-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 2816 / 1536;
+  object-fit: cover;
+}
+
+.contact-location-caption {
+  padding: 1rem 1.25rem 1.15rem;
+  font-size: 0.9375rem;
+  color: #4b5563;
+}
+
 @media (max-width: 1024px) {
   .contact-container {
     grid-template-columns: 1fr;
@@ -1479,6 +1519,10 @@ html.dark .contact-studios-title {
   color: var(--text-3);
 }
 
+html.dark .contact-location-caption {
+  color: var(--text-2);
+}
+
 html.dark .story-label,
 html.dark .stat-number,
 html.dark .portfolio-project-link,
@@ -1491,7 +1535,8 @@ html.dark .expertise-card,
 html.dark .philosophy-card,
 html.dark .capability-card,
 html.dark .portfolio-project-card,
-html.dark .studio-card {
+html.dark .studio-card,
+html.dark .contact-location-figure {
   background: var(--surface-1);
   border-color: var(--border-dark);
 }
@@ -1657,4 +1702,46 @@ html.dark .footer-separator {
   width: 100%;
   height: 250px;
   overflow: hidden;
+}
+
+/* Stacked call-to-action links (e.g. Home "Who We Are" section). */
+.btn-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+/* Shared fade slideshow for the Home hero and About story images. */
+.fade-slideshow {
+  position: relative;
+  width: 100%;
+}
+
+.hero-slideshow {
+  aspect-ratio: 16 / 9;
+}
+
+.fade-slideshow > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.fade-slideshow > img:first-child,
+.fade-slideshow > img.is-active {
+  opacity: 1;
+}
+
+.fade-slideshow.is-js > img:not(.is-active) {
+  opacity: 0;
+}
+
+/* Fade slideshow arrows stay visible (gallery-card arrows are hover-only). */
+.fade-slideshow .pg-nav {
+  opacity: 1;
 }

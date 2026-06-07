@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Turn each [data-contact='email-button'] anchor into a mailto link WITHOUT
-  // ever showing the address as text — only the href is set, at runtime.
+  // ever showing the address as text; only the href is set, at runtime.
   document.querySelectorAll("[data-contact='email-button']").forEach((el) => {
     el.setAttribute("href", "mailto:" + email);
   });

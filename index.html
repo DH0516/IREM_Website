@@ -7,11 +7,11 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
     />
-    <link rel="icon" href="public/media/images/IREM_Logo.png" />
-    <title>IREM — Institut de Recherche et Exploration Musicale</title>
+    <link rel="icon" href="public/media/images/shared/branding/IREM_Logo.png" />
+    <title>IREM, Institut de Recherche et Exploration Musicale</title>
     <meta
       name="description"
-      content="IREM — Institut de Recherche et Exploration Musicale. Software development, 3D prototyping, additive manufacturing, and acoustic R&D in Montréal."
+      content="IREM, Institut de Recherche et Exploration Musicale. Software development, 3D prototyping, additive manufacturing, and acoustic R&D in Montréal."
     />
     <meta property="og:title" content="IREM" />
     <meta
@@ -28,7 +28,7 @@
       <nav class="navbar">
         <a href="index.html" class="logo">
           <img
-            src="public/media/images/IREM_Logo.png"
+            src="public/media/images/shared/branding/IREM_Logo.png"
             alt="IREM Logo"
             width="24"
             height="24"
@@ -86,17 +86,47 @@
                 Where Musical Exploration is Digitally and Physically Powered.
               </h1>
               <p class="hero-description">
-                From precision apps to 3D-fabricated instruments — we engineer
+                From precision apps to 3D-fabricated instruments: we engineer
                 what others only imagine.
               </p>
             </div>
             <div class="hero-image">
-              <img
-                src="public/media/images/display-images-webp/09-instrument-design-workshop.webp"
-                alt="IREM engineering studio"
-                width="1600"
-                height="900"
-              />
+              <div class="fade-slideshow hero-slideshow" data-hero-slideshow>
+                <img
+                  src="public/media/images/pages/home/hero/09-instrument-design-workshop.webp"
+                  alt="IREM studio and instrument imagery"
+                  width="1600"
+                  height="900"
+                />
+                <img
+                  src="public/media/images/pages/home/hero/10-woodwind-maker-workbench.webp"
+                  alt=""
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <img
+                  src="public/media/images/pages/home/hero/02-music-store-showroom.webp"
+                  alt=""
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <img
+                  src="public/media/images/pages/home/hero/08-museum-woodwind-display.webp"
+                  alt=""
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <img
+                  src="public/media/images/pages/home/hero/04-historical-instrument-cabinet.webp"
+                  alt=""
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -111,7 +141,10 @@
               platforms, fabricate physical prototypes, and conduct research at
               the frontier of acoustic and musical science.
             </p>
-            <a href="about.html" class="btn-link">More About Us →</a>
+            <div class="home-link-group">
+              <a href="about.html" class="btn-link">More About Us →</a>
+              <a href="portfolio.html" class="btn-link">See our projects →</a>
+            </div>
           </div>
         </section>
 
