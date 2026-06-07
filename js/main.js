@@ -1,23 +1,25 @@
 // ============================================================
-// TRANSLATIONS
+// LANGUAGE / UI STRINGS
 // ============================================================
+// The site ships separate English (root) and French (/fr/) pages. The language
+// selector just navigates between them (each <option> value is the target URL).
+// These strings localize the labels for JS-generated controls.
 
-const translations = {
+const LANG = document.documentElement.lang === "fr" ? "fr" : "en";
+const UI = {
   en: {
-    home: "Home",
-    about: "About",
-    services: "Services",
-    projects: "Projects",
-    contact: "Contact",
+    prev: "Previous image",
+    next: "Next image",
+    goTo: "Go to image ",
+    show: "Show image ",
   },
   fr: {
-    home: "Accueil",
-    about: "À propos",
-    services: "Services",
-    projects: "Projets",
-    contact: "Contact",
+    prev: "Image précédente",
+    next: "Image suivante",
+    goTo: "Aller à l'image ",
+    show: "Afficher l'image ",
   },
-};
+}[LANG];
 
 // ============================================================
 // DARK MODE
@@ -66,31 +68,17 @@ function initBurger() {
 // ============================================================
 // LANGUAGE SWITCHER
 // ============================================================
-
-function applyTranslations(lang) {
-  const dict = translations[lang] || translations.en;
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    if (dict[key]) el.textContent = dict[key];
-  });
-}
+// Each <option> value is the URL of the corresponding page in the other
+// language; selecting one navigates there. EN pages live at the root, FR pages
+// under /fr/.
 
 function initLanguage() {
-  const stored = localStorage.getItem("lang");
-  const browserLang = navigator.language.split("-")[0];
-  const lang = stored || (translations[browserLang] ? browserLang : "en");
-
-  applyTranslations(lang);
-
   const select = document.getElementById("lang-select");
-  if (select) {
-    select.value = lang;
-    select.addEventListener("change", (e) => {
-      const newLang = e.target.value;
-      localStorage.setItem("lang", newLang);
-      applyTranslations(newLang);
-    });
-  }
+  if (!select) return;
+  select.addEventListener("change", (e) => {
+    const url = e.target.value;
+    if (url) window.location.href = url;
+  });
 }
 
 // ============================================================
@@ -104,7 +92,6 @@ function initGalleries() {
     const track = carousel.querySelector(".pg-track");
     const dotsWrap = carousel.querySelector(".pg-dots");
     const slides = track ? Array.from(track.children) : [];
-    const autoMs = Number(carousel.dataset.carouselAuto || 0);
 
     // A single image needs no controls.
     if (slides.length <= 1) {
@@ -124,11 +111,8 @@ function initGalleries() {
       const dot = document.createElement("button");
       dot.type = "button";
       dot.className = "pg-dot" + (i === 0 ? " is-active" : "");
-      dot.setAttribute("aria-label", "Go to image " + (i + 1));
-      dot.addEventListener("click", () => {
-        goTo(i);
-        restartAuto();
-      });
+      dot.setAttribute("aria-label", UI.goTo + (i + 1));
+      dot.addEventListener("click", () => goTo(i));
       if (dotsWrap) dotsWrap.appendChild(dot);
       return dot;
     });
@@ -136,18 +120,8 @@ function initGalleries() {
     // Prev / next
     const prev = carousel.querySelector(".pg-prev");
     const next = carousel.querySelector(".pg-next");
-    if (prev) {
-      prev.addEventListener("click", () => {
-        goTo(current() - 1);
-        restartAuto();
-      });
-    }
-    if (next) {
-      next.addEventListener("click", () => {
-        goTo(current() + 1);
-        restartAuto();
-      });
-    }
+    if (prev) prev.addEventListener("click", () => goTo(current() - 1));
+    if (next) next.addEventListener("click", () => goTo(current() + 1));
 
     // Keep dots in sync while scrolling/swiping
     track.addEventListener(
@@ -158,20 +132,6 @@ function initGalleries() {
       },
       { passive: true }
     );
-
-    let timer = null;
-    function restartAuto() {
-      if (timer) clearInterval(timer);
-      if (
-        autoMs <= 0 ||
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      ) {
-        return;
-      }
-      timer = setInterval(() => goTo((current() + 1) % slides.length), autoMs);
-    }
-
-    restartAuto();
   });
 }
 
@@ -240,7 +200,7 @@ function initFadeSlideshow(box, options = {}) {
     const dot = document.createElement("button");
     dot.type = "button";
     dot.className = "pg-dot" + (i === 0 ? " is-active" : "");
-    dot.setAttribute("aria-label", "Show image " + (i + 1));
+    dot.setAttribute("aria-label", UI.show + (i + 1));
     dot.addEventListener("click", () => {
       go(i);
       restart();
@@ -262,8 +222,8 @@ function initFadeSlideshow(box, options = {}) {
     return button;
   }
 
-  box.appendChild(makeArrow("pg-prev", "Previous image", "‹", -1));
-  box.appendChild(makeArrow("pg-next", "Next image", "›", 1));
+  box.appendChild(makeArrow("pg-prev", UI.prev, "‹", -1));
+  box.appendChild(makeArrow("pg-next", UI.next, "›", 1));
   box.appendChild(dotsWrap);
 
   restart();
@@ -273,29 +233,38 @@ function initHeroSlideshow() {
   const box = document.querySelector("[data-hero-slideshow]");
   if (!box) return;
 
-  const pool = [
-    "public/media/images/pages/home/hero/01-historical-woodwind-workbench.webp",
-    "public/media/images/pages/home/hero/02-music-store-showroom.webp",
-    "public/media/images/pages/home/hero/03-instrument-wall-display.webp",
-    "public/media/images/pages/home/hero/04-historical-instrument-cabinet.webp",
-    "public/media/images/pages/home/hero/06-woodwind-and-keyboard-display.webp",
-    "public/media/images/pages/home/hero/08-museum-woodwind-display.webp",
-    "public/media/images/pages/home/hero/09-instrument-design-workshop.webp",
-    "public/media/images/pages/home/hero/10-woodwind-maker-workbench.webp",
-    "public/media/images/pages/home/hero/11-audio-lab-desk-with-recorder-prototype.webp",
-    "public/media/images/pages/home/hero/12-museum-instrument-exhibit.webp",
-    "public/media/images/pages/home/hero/14-historical-flute-display-case.webp",
-    "public/media/images/pages/home/hero/17-trumpet-cad-workstation.webp",
+  // Derive the image directory from the page's own first hero image, so the
+  // pool resolves correctly at any depth (root EN pages and /fr/ pages alike).
+  const first = box.querySelector("img");
+  if (!first) return;
+  const dir = first.getAttribute("src").replace(/[^/]+$/, "");
+
+  const files = [
+    "01-historical-woodwind-workbench.webp",
+    "02-music-store-showroom.webp",
+    "03-instrument-wall-display.webp",
+    "04-historical-instrument-cabinet.webp",
+    "06-woodwind-and-keyboard-display.webp",
+    "08-museum-woodwind-display.webp",
+    "09-instrument-design-workshop.webp",
+    "10-woodwind-maker-workbench.webp",
+    "11-audio-lab-desk-with-recorder-prototype.webp",
+    "12-museum-instrument-exhibit.webp",
+    "14-historical-flute-display-case.webp",
+    "17-trumpet-cad-workstation.webp",
   ];
 
-  for (let i = pool.length - 1; i > 0; i--) {
+  for (let i = files.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [pool[i], pool[j]] = [pool[j], pool[i]];
+    [files[i], files[j]] = [files[j], files[i]];
   }
 
   initFadeSlideshow(box, {
-    sources: pool.slice(0, 5),
-    defaultAlt: "IREM studio and instrument imagery",
+    sources: files.slice(0, 5).map((f) => dir + f),
+    defaultAlt:
+      LANG === "fr"
+        ? "Studio IREM et instruments"
+        : "IREM studio and instrument imagery",
     width: 1600,
     height: 900,
     autoMs: 5000,

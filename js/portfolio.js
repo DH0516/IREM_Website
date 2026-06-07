@@ -2,6 +2,11 @@
 // (Image galleries are handled by initGalleries() in main.js.)
 
 document.addEventListener("DOMContentLoaded", () => {
+  const fr = document.documentElement.lang === "fr";
+  const LABELS = fr
+    ? { view: "Voir l'étude de cas →", hide: "Masquer l'étude de cas ↑" }
+    : { view: "View Case Study →", hide: "Hide Case Study ↑" };
+
   document.querySelectorAll(".portfolio-project-link").forEach((btn) => {
     btn.addEventListener("click", () => {
       const card = btn.closest(".portfolio-project-card");
@@ -11,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const isOpen = caseStudy.classList.contains("open");
       caseStudy.classList.toggle("open", !isOpen);
       btn.setAttribute("aria-expanded", String(!isOpen));
-      btn.textContent = isOpen ? "View Case Study →" : "Hide Case Study ↑";
+      btn.textContent = isOpen ? LABELS.view : LABELS.hide;
     });
   });
 });

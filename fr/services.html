@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <link rel="icon" href="../public/media/images/shared/branding/IREM_Logo.png" />
+    <title>Services | IREM</title>
+    <meta
+      name="description"
+      content="IREM offre des services de développement d'applications, de prototypage 3D, de fabrication additive et de R&D acoustique à Montréal, au Canada."
+    />
+    <meta property="og:title" content="Services | IREM" />
+    <meta
+      property="og:description"
+      content="Ingénierie de bout en bout, de l'écran à la forme physique."
+    />
+    <meta property="og:url" content="https://dh0516.github.io/IREM_Website/fr/services.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dh0516.github.io/IREM_Website/public/media/images/shared/branding/IREM_Logo.png" />
+    <link rel="alternate" hreflang="en" href="https://dh0516.github.io/IREM_Website/services.html" />
+    <link rel="alternate" hreflang="fr" href="https://dh0516.github.io/IREM_Website/fr/services.html" />
+    <link rel="alternate" hreflang="x-default" href="https://dh0516.github.io/IREM_Website/services.html" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <header class="navbar-wrapper">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img
+            src="../public/media/images/shared/branding/IREM_Logo.png"
+            alt="Logo IREM"
+            width="24"
+            height="24"
+          />
+          <div class="logo-copy">
+            <span class="logo-name">IREM</span>
+            <span class="logo-tagline"
+              >Institut de Recherche et Exploration Musicale</span
+            >
+          </div>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Accueil</a>
+          <a href="about.html" data-i18n="about">À propos</a>
+          <a href="services.html" data-i18n="services">Services</a>
+          <a href="portfolio.html" data-i18n="projects">Projets</a>
+          <a href="contact.html" data-i18n="contact">Contact</a>
+          <div class="language_select_wrap">
+            <select
+              id="lang-select"
+              class="language_select"
+              aria-label="Sélecteur de langue"
+            >
+              <option value="../services.html">English</option>
+              <option value="services.html" selected>Français</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="nav-controls">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Basculer le mode sombre"
+          >
+            ☾
+          </button>
+          <button id="burger" class="burger" type="button" aria-label="Menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ── MAIN ───────────────────────────────────────────── -->
+    <main>
+      <div class="services-page">
+        <!-- Hero -->
+        <section class="services-hero">
+          <div class="services-hero-container">
+            <h1 class="services-hero-title">
+              Ingénierie de bout en bout, de l'écran à la forme physique.
+            </h1>
+            <p class="services-hero-description">
+              Nous livrons des solutions logicielles, matérielles et de
+              recherche pour des clients qui exigent de la précision à chaque
+              niveau.
+            </p>
+          </div>
+        </section>
+
+        <!-- Capabilities -->
+        <section class="capabilities-section">
+          <div class="capabilities-container">
+            <div class="capabilities-header">
+              <h2 class="capabilities-title">Compétences clés</h2>
+            </div>
+
+            <div class="capabilities-grid">
+              <!-- App Development -->
+              <div class="capability-card">
+                <div class="cap-media">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="../public/media/images/pages/services/app-development/music-app.webp"
+                        alt="Application de pratique musicale d'IREM"
+                        class="img-contain"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/services/app-development/16-audio-waveform-visualization.webp"
+                        alt="Visualisation de forme d'onde audio et de traitement du signal"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Image précédente"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Image suivante"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                </div>
+                <div class="capability-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                    />
+                  </svg>
+                </div>
+                <div class="capability-content">
+                  <h3 class="capability-title">Développement d'applications</h3>
+                  <p class="capability-description">
+                    Développement d'applications multiplateformes pour le Web,
+                    le mobile et des plateformes spécialisées. Nous concevons des
+                    logiciels performants et modulaires, axés sur le traitement
+                    du signal, la visualisation de données et l'expérience
+                    utilisateur.
+                  </p>
+                  <div class="capability-footer">
+                    <span class="capability-tag">LOGICIEL</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3D Prototyping -->
+              <div class="capability-card">
+                <div class="cap-media">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="../public/media/images/pages/services/3d-prototyping/accessibility-winds-project2.webp"
+                        alt="Modèle CAO d'une flûte à bec adaptée"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/services/3d-prototyping/17-trumpet-cad-workstation.webp"
+                        alt="Poste de travail CAO modélisant un cuivre"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Image précédente"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Image suivante"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                </div>
+                <div class="capability-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                  </svg>
+                </div>
+                <div class="capability-content">
+                  <h3 class="capability-title">Prototypage 3D</h3>
+                  <p class="capability-description">
+                    Des croquis conceptuels aux modèles prêts pour la production,
+                    à l'aide de Blender, d'Autodesk Fusion et d'outils de CAO
+                    professionnels. Nous prototypons des boîtiers, des
+                    instruments, des pièces mécaniques et des objets sur mesure.
+                  </p>
+                  <div class="capability-footer">
+                    <span class="capability-tag">CONCEPTION</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Additive Manufacturing -->
+              <div class="capability-card">
+                <div class="cap-media">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="../public/media/images/pages/services/additive-manufacturing/3d-printing.webp"
+                        alt="Une flûte à bec en cours d'impression 3D"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/services/additive-manufacturing/11-audio-lab-desk-with-recorder-prototype.webp"
+                        alt="Bureau de laboratoire avec un prototype de flûte à bec imprimé en 3D"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Image précédente"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Image suivante"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                </div>
+                <div class="capability-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <rect x="2" y="6" width="20" height="12" rx="2" />
+                    <circle cx="7" cy="12" r="2" />
+                    <circle cx="17" cy="12" r="2" />
+                  </svg>
+                </div>
+                <div class="capability-content">
+                  <h3 class="capability-title">Fabrication additive</h3>
+                  <p class="capability-description">
+                    Fabrication par procédés FDM et SLS pour le prototypage
+                    rapide et les composants fonctionnels de production finale.
+                    Nous gérons la sélection des matériaux, l'optimisation de
+                    l'impression et la finition pour des applications clients et
+                    de recherche.
+                  </p>
+                  <div class="capability-footer">
+                    <span class="capability-tag">FABRICATION</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Acoustic R&D -->
+              <div class="capability-card">
+                <div class="cap-media">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="../public/media/images/pages/services/acoustic-rd/acoustics-research.webp"
+                        alt="Logiciel d'analyse acoustique, forme d'onde et FFT"
+                        class="img-contain"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/services/acoustic-rd/07-acoustic-analysis-workstation.webp"
+                        alt="Poste de travail d'analyse acoustique"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Image précédente"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Image suivante"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                </div>
+                <div class="capability-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#4F46E5"
+                    stroke-width="2"
+                  >
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                  </svg>
+                </div>
+                <div class="capability-content">
+                  <h3 class="capability-title">R&amp;D acoustique</h3>
+                  <p class="capability-description">
+                    Recherche appliquée couvrant l'acoustique, la science des
+                    instruments de musique, le DSP et les technologies sonores.
+                    Nous collaborons avec des établissements universitaires et
+                    des clients privés sur des projets expérimentaux et de
+                    développement.
+                  </p>
+                  <div class="capability-footer">
+                    <span class="capability-tag">RECHERCHE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="services-cta-section">
+          <div class="services-cta-content">
+            <h2 class="services-cta-title">Prêt à faire passer votre projet au niveau supérieur ?</h2>
+            <p class="services-cta-description">
+              Nous offrons des consultations initiales aux nouveaux clients et
+              aux partenariats de recherche.
+            </p>
+            <a href="contact.html" class="cta-button">Communiquer avec nous</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>© 2026 IREM. Tous droits réservés.</p>
+        <p data-contact="address">Montréal, Québec, Canada</p>
+        <p>
+          <a href="privacy-policy.html" class="footer-link"
+            >Politique de confidentialité</a
+          >
+          <span class="footer-separator">|</span>
+          <a href="terms-of-service.html" class="footer-link"
+            >Conditions d'utilisation</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
