@@ -60,10 +60,53 @@ python -m http.server 3000
 
 ## Deployment (GitHub Pages)
 
-The site is fully static — no build step.
+There are two repos:
 
-1. Push to GitHub. In **Settings → Pages**, set **Source = Deploy from a branch**,
-   branch `main` (or `gh-pages`), folder **`/ (root)`**.
+- `DH0516/IREM_Website-private` is the private working repo.
+- `DH0516/IREM_Website` is the public live repo.
+
+The public repo is a clean site snapshot, not a mirror of this private repo.
+GitHub Pages is configured on the public repo with **Source = branch `main`,
+folder `/ (root)`**, and `main` is protected so direct pushes do not deploy live.
+
+### Public publish flow
+
+1. Make and commit changes in the private repo as usual.
+2. Push the private branch normally, for example:
+
+   ```powershell
+   git push origin HEAD:main
+   ```
+
+3. Publish a clean snapshot of the committed site to the public repo's `dev`
+   branch:
+
+   ```powershell
+   .\scripts\git\publish-public.ps1 -Ref HEAD -CreatePr
+   ```
+
+4. Review the PR from `dev` to `main` in `DH0516/IREM_Website`.
+5. Merge that PR to deploy the live site.
+
+If you want one command for both pushes, use:
+
+```powershell
+.\scripts\git\push-both.ps1 -PrivateRefSpec HEAD:main -PublicRef HEAD -CreatePr
+```
+
+That pushes the private repo first, then publishes the public snapshot to
+`public/dev`.
+
+### Public snapshot contents
+
+The public snapshot is defined by `scripts/git/public-site-paths.txt`. Only those
+paths are exported, which keeps internal docs and helper scripts out of the public
+repo.
+
+### GitHub Pages settings
+
+1. In the public repo, keep **Settings → Pages → Source = Deploy from a branch**,
+   branch `main`, folder **`/ (root)`**.
 2. Enable **Enforce HTTPS**.
 3. The site is served at **https://dh0516.github.io/IREM_Website/** — no custom
    domain, no DNS, nothing to pay for. The `og:url` tags already point here.

@@ -7,19 +7,23 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
     />
-    <link rel="icon" href="public/media/images/IREM_Logo.png" />
-    <title>About — IREM</title>
+    <link rel="icon" href="public/media/images/shared/branding/IREM_Logo.png" />
+    <title>About | IREM</title>
     <meta
       name="description"
-      content="Learn about IREM — a Montréal-based team of musicians and engineers building software, fabricating prototypes, and conducting acoustic research."
+      content="Learn about IREM, a Montréal-based team of musicians and engineers building software, fabricating prototypes, and conducting acoustic research."
     />
-    <meta property="og:title" content="About — IREM" />
+    <meta property="og:title" content="About | IREM" />
     <meta
       property="og:description"
       content="Engineers by Curiosity, Builders by Trade."
     />
     <meta property="og:url" content="https://dh0516.github.io/IREM_Website/about.html" />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dh0516.github.io/IREM_Website/public/media/images/shared/branding/IREM_Logo.png" />
+    <link rel="alternate" hreflang="en" href="https://dh0516.github.io/IREM_Website/about.html" />
+    <link rel="alternate" hreflang="fr" href="https://dh0516.github.io/IREM_Website/fr/about.html" />
+    <link rel="alternate" hreflang="x-default" href="https://dh0516.github.io/IREM_Website/about.html" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -28,7 +32,7 @@
       <nav class="navbar">
         <a href="index.html" class="logo">
           <img
-            src="public/media/images/IREM_Logo.png"
+            src="public/media/images/shared/branding/IREM_Logo.png"
             alt="IREM Logo"
             width="24"
             height="24"
@@ -53,8 +57,8 @@
               class="language_select"
               aria-label="Language selector"
             >
-              <option value="en">English</option>
-              <option value="fr">Français</option>
+              <option value="about.html" selected>English</option>
+              <option value="fr/about.html">Français</option>
             </select>
           </div>
         </div>
@@ -81,7 +85,7 @@
         <!-- Hero -->
         <section class="about-hero">
           <img
-            src="public/media/images/display-images-webp/10-woodwind-maker-workbench.webp"
+            src="public/media/images/pages/about/hero/10-woodwind-maker-workbench.webp"
             alt="Engineering workshop"
             class="about-hero-bg"
             width="1600"
@@ -93,7 +97,7 @@
                 Engineers by Curiosity,<br />Builders by Trade.
               </h1>
               <p class="about-hero-description">
-                We merge computational thinking with physical craft — from lines
+                We merge computational thinking with physical craft, from lines
                 of code to layers of filament.
               </p>
             </div>
@@ -109,7 +113,7 @@
                 Founded in Montréal in 2025, the Institut de Recherche et
                 Exploration Musicale (IREM) was born at the crossroads of music,
                 engineering, and fabrication. The idea had been building for
-                years — born from the frustration of watching great creative and
+                years, born from the frustration of watching great creative and
                 technical problems go unsolved because no one was willing to
                 work across both worlds at once. In late 2024, a grant from the
                 Conseil des arts et des lettres du Québec (CALQ) gave the team
@@ -143,7 +147,40 @@
               </div>
             </div>
             <div class="story-image">
-              <img src="public/media/images/IREM_Logo.png" alt="IREM logo" />
+              <div
+                class="fade-slideshow story-logo-slideshow"
+                data-fade-slideshow
+                data-slideshow-auto="5000"
+                data-slideshow-alt="Alternate IREM logo concepts"
+              >
+                  <img
+                    src="public/media/images/pages/about/story/logo-concept-01.webp"
+                    alt="Alternate IREM logo concepts"
+                    width="1022"
+                    height="1022"
+                  />
+                  <img
+                    src="public/media/images/pages/about/story/logo-concept-02.webp"
+                    alt=""
+                    width="1022"
+                    height="1022"
+                    loading="lazy"
+                  />
+                  <img
+                    src="public/media/images/pages/about/story/logo-concept-03.webp"
+                    alt=""
+                    width="1022"
+                    height="1022"
+                    loading="lazy"
+                  />
+                  <img
+                    src="public/media/images/pages/about/story/logo-concept-04.webp"
+                    alt=""
+                    width="1022"
+                    height="1022"
+                    loading="lazy"
+                  />
+              </div>
             </div>
           </div>
         </section>

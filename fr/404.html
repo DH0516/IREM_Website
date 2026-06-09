@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,10 +7,10 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
     />
-    <link rel="icon" href="public/media/images/shared/branding/IREM_Logo.png" />
-    <title>Page Not Found | IREM</title>
+    <link rel="icon" href="../public/media/images/shared/branding/IREM_Logo.png" />
+    <title>Page introuvable | IREM</title>
     <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <!-- ── NAVBAR ─────────────────────────────────────────── -->
@@ -18,8 +18,8 @@
       <nav class="navbar">
         <a href="index.html" class="logo">
           <img
-            src="public/media/images/shared/branding/IREM_Logo.png"
-            alt="IREM Logo"
+            src="../public/media/images/shared/branding/IREM_Logo.png"
+            alt="Logo IREM"
             width="24"
             height="24"
           />
@@ -32,19 +32,19 @@
         </a>
 
         <div class="nav-links" id="nav-links">
-          <a href="index.html" data-i18n="home">Home</a>
-          <a href="about.html" data-i18n="about">About</a>
+          <a href="index.html" data-i18n="home">Accueil</a>
+          <a href="about.html" data-i18n="about">À propos</a>
           <a href="services.html" data-i18n="services">Services</a>
-          <a href="portfolio.html" data-i18n="projects">Projects</a>
+          <a href="portfolio.html" data-i18n="projects">Projets</a>
           <a href="contact.html" data-i18n="contact">Contact</a>
           <div class="language_select_wrap">
             <select
               id="lang-select"
               class="language_select"
-              aria-label="Language selector"
+              aria-label="Sélecteur de langue"
             >
-              <option value="404.html" selected>English</option>
-              <option value="fr/404.html">Français</option>
+              <option value="../404.html">English</option>
+              <option value="404.html" selected>Français</option>
             </select>
           </div>
         </div>
@@ -54,7 +54,7 @@
             id="theme-toggle"
             class="theme-toggle"
             type="button"
-            aria-label="Toggle dark mode"
+            aria-label="Basculer le mode sombre"
           >
             ☾
           </button>
@@ -69,11 +69,11 @@
     <main>
       <section class="services-cta-section cta-centered">
         <div class="services-cta-content">
-          <h1 class="services-cta-title">404: Page not found.</h1>
+          <h1 class="services-cta-title">404 : Page introuvable.</h1>
           <p class="services-cta-description">
-            The page you're looking for doesn't exist or has moved.
+            La page que vous recherchez n'existe pas ou a été déplacée.
           </p>
-          <a href="index.html" class="cta-button">Back to Home</a>
+          <a href="index.html" class="cta-button">Retour à l'accueil</a>
         </div>
       </section>
     </main>
@@ -81,19 +81,21 @@
     <!-- ── FOOTER ─────────────────────────────────────────── -->
     <footer class="footer">
       <div class="footer-inner">
-        <p>© 2026 IREM. All rights reserved.</p>
+        <p>© 2026 IREM. Tous droits réservés.</p>
         <p data-contact="address">Montréal, Québec, Canada</p>
         <p>
-          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="privacy-policy.html" class="footer-link"
+            >Politique de confidentialité</a
+          >
           <span class="footer-separator">|</span>
           <a href="terms-of-service.html" class="footer-link"
-            >Terms of Service</a
+            >Conditions d'utilisation</a
           >
         </p>
       </div>
     </footer>
 
-    <script src="js/config.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

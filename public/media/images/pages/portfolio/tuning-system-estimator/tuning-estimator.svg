@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Per-note tuning deviation profile">
+  <rect width="800" height="600" fill="#eef2ff"/>
+  <rect x="12" y="12" width="776" height="576" fill="none" stroke="#c7d2fe" stroke-width="2" stroke-dasharray="10 8"/>
+  <!-- axes -->
+  <line x1="92" y1="110" x2="92" y2="500" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="92" y1="305" x2="740" y2="305" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="44" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="20" fill="#6b7280" text-anchor="middle" transform="rotate(-90 44 300)">Δ pitch (cents)</text>
+  <!-- box-and-whisker bars: per-note deviation from a reference grid -->
+  <g stroke="#4f46e5" fill="#4f46e5">
+    <g fill-opacity="0.18" stroke-width="2.5">
+      <rect x="116" y="288" width="40" height="52"/>
+      <rect x="188" y="262" width="40" height="46"/>
+      <rect x="260" y="300" width="40" height="50"/>
+      <rect x="332" y="236" width="40" height="48"/>
+      <rect x="404" y="316" width="40" height="52"/>
+      <rect x="476" y="214" width="40" height="52"/>
+      <rect x="548" y="328" width="40" height="54"/>
+      <rect x="620" y="248" width="40" height="50"/>
+      <rect x="692" y="200" width="40" height="58"/>
+    </g>
+    <g stroke-width="1.6">
+      <line x1="136" y1="252" x2="136" y2="366"/><line x1="208" y1="228" x2="208" y2="332"/>
+      <line x1="280" y1="266" x2="280" y2="384"/><line x1="352" y1="198" x2="352" y2="306"/>
+      <line x1="424" y1="284" x2="424" y2="394"/><line x1="496" y1="178" x2="496" y2="290"/>
+      <line x1="568" y1="296" x2="568" y2="408"/><line x1="640" y1="212" x2="640" y2="320"/>
+      <line x1="712" y1="160" x2="712" y2="282"/>
+    </g>
+    <g stroke="#f59e0b" stroke-width="3.5">
+      <line x1="116" y1="312" x2="156" y2="312"/><line x1="188" y1="286" x2="228" y2="286"/>
+      <line x1="260" y1="326" x2="300" y2="326"/><line x1="332" y1="260" x2="372" y2="260"/>
+      <line x1="404" y1="342" x2="444" y2="342"/><line x1="476" y1="240" x2="516" y2="240"/>
+      <line x1="548" y1="356" x2="588" y2="356"/><line x1="620" y1="272" x2="660" y2="272"/>
+      <line x1="692" y1="228" x2="732" y2="228"/>
+    </g>
+  </g>
+  <text x="416" y="544" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="700" fill="#4f46e5" text-anchor="middle">Per-note tuning profile</text>
+</svg>

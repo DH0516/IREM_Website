@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <link rel="icon" href="../public/media/images/shared/branding/IREM_Logo.png" />
+    <title>Projets | IREM</title>
+    <meta
+      name="description"
+      content="Découvrez les projets actifs d'IREM : applications d'accordeur DSP, plateformes de génération de mélodies, instruments à vent imprimés en 3D et recherche acoustique."
+    />
+    <meta property="og:title" content="Projets | IREM" />
+    <meta
+      property="og:description"
+      content="Projets actifs et études de cas : des plateformes DSP aux instruments 3D inspirés des références historiques."
+    />
+    <meta property="og:url" content="https://dh0516.github.io/IREM_Website/fr/portfolio.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dh0516.github.io/IREM_Website/public/media/images/shared/branding/IREM_Logo.png" />
+    <link rel="alternate" hreflang="en" href="https://dh0516.github.io/IREM_Website/portfolio.html" />
+    <link rel="alternate" hreflang="fr" href="https://dh0516.github.io/IREM_Website/fr/portfolio.html" />
+    <link rel="alternate" hreflang="x-default" href="https://dh0516.github.io/IREM_Website/portfolio.html" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <header class="navbar-wrapper">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img
+            src="../public/media/images/shared/branding/IREM_Logo.png"
+            alt="Logo IREM"
+            width="24"
+            height="24"
+          />
+          <div class="logo-copy">
+            <span class="logo-name">IREM</span>
+            <span class="logo-tagline"
+              >Institut de Recherche et Exploration Musicale</span
+            >
+          </div>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="index.html" data-i18n="home">Accueil</a>
+          <a href="about.html" data-i18n="about">À propos</a>
+          <a href="services.html" data-i18n="services">Services</a>
+          <a href="portfolio.html" data-i18n="projects">Projets</a>
+          <a href="contact.html" data-i18n="contact">Contact</a>
+          <div class="language_select_wrap">
+            <select
+              id="lang-select"
+              class="language_select"
+              aria-label="Sélecteur de langue"
+            >
+              <option value="../portfolio.html">English</option>
+              <option value="portfolio.html" selected>Français</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="nav-controls">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Basculer le mode sombre"
+          >
+            ☾
+          </button>
+          <button id="burger" class="burger" type="button" aria-label="Menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ── MAIN ───────────────────────────────────────────── -->
+    <main>
+      <div class="portfolio-page">
+        <!-- Hero -->
+        <section class="portfolio-hero">
+          <div class="portfolio-hero-container">
+            <h1 class="portfolio-hero-title">
+              Projets actifs et études de cas
+            </h1>
+            <p class="portfolio-hero-description">
+              Un aperçu de ce que nous concevons en ce moment, des plateformes
+              DSP aux instruments 3D inspirés des références historiques.
+            </p>
+          </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="portfolio-grid-section">
+          <div class="portfolio-container">
+            <h2 class="portfolio-section-title">Projets</h2>
+            <div class="portfolio-grid">
+              <!-- Project 1 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="../public/media/images/pages/portfolio/advanced-tuner-app/tuner2.webp"
+                        alt="Application d'accordeur IREM, écran de l'aiguille d'accord"
+                        class="portfolio-project-image img-contain"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/advanced-tuner-app/tuner1.webp"
+                        alt="Application d'accordeur IREM, téléversement de fichier et forme d'onde"
+                        class="portfolio-project-image img-contain"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/advanced-tuner-app/13-smartphone-pitch-tuner-app.webp"
+                        alt="Concept d'application d'accordeur de hauteur pour téléphone intelligent"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Image précédente"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Image suivante"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">LOGICIEL / DSP</div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">Application d'accordeur avancée</h3>
+                  <p class="portfolio-project-description">
+                    Un outil d'analyse de hauteur modulaire et multiplateforme
+                    bâti sur le DSP WebAudio. L'application analyse les données de
+                    fréquence en temps réel sur le web et le mobile à l'aide
+                    d'algorithmes sur mesure pour une détection précise de la
+                    hauteur sur une vaste gamme d'instruments et de systèmes
+                    d'accord.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    Voir l'étude de cas →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      L'Application d'accordeur avancée est une plateforme
+                      modulaire de détection de hauteur bâtie sur l'API WebAudio,
+                      conçue pour fonctionner nativement dans les navigateurs web
+                      et sur les appareils mobiles sans nécessiter d'installation
+                      native.
+                    </p>
+                    <p>
+                      Au cœur du système, des algorithmes DSP sur mesure analysent
+                      les données de fréquence audio entrantes en temps réel et
+                      identifient la hauteur avec une grande précision sur une
+                      vaste gamme d'instruments et de systèmes d'accord.
+                    </p>
+                    <p>
+                      L'architecture modulaire permet de développer, tester et
+                      étendre indépendamment chaque composant de détection et
+                      d'analyse, ce qui la rend adaptable autant pour l'accordage
+                      à usage général que pour des applications spécialisées de
+                      recherche musicale.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <img
+                    src="../public/media/images/pages/portfolio/melody-generation-platform/15-digital-sheet-music-workstation.webp"
+                    alt="Plateforme de génération de mélodies"
+                    class="portfolio-project-image"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                  <div class="portfolio-project-tag">
+                    LOGICIEL / PROJET CLIENT
+                  </div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">
+                    Plateforme de génération de mélodies
+                  </h3>
+                  <p class="portfolio-project-description">
+                    Une application web et mobile soutenue par un client qui
+                    génère des mélodies au moyen d'une composition algorithmique
+                    exclusive. Les détails ne peuvent être divulgués en raison
+                    d'une entente de confidentialité.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    Voir l'étude de cas →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Il s'agit d'une application web et mobile soutenue par un
+                      client et axée sur la génération algorithmique de mélodies.
+                    </p>
+                    <p>
+                      La plateforme a été développée en partenariat avec un
+                      client privé et repose sur des algorithmes de composition
+                      exclusifs.
+                    </p>
+                    <p>
+                      D'autres détails ne peuvent être divulgués en raison d'une
+                      entente de confidentialité.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="../public/media/images/pages/portfolio/3d-woodwind-creations/20250123_000906.webp"
+                        alt="Deux flûtes à bec baroques imprimées en 3D"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/3d-woodwind-creations/20250123_000826.webp"
+                        alt="Une flûte à bec baroque imprimée en 3D"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/3d-woodwind-creations/20250128_140805.webp"
+                        alt="Flûtes à bec imprimées en 3D à côté de l'imprimante à résine"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/3d-woodwind-creations/20250128_140812.webp"
+                        alt="Gros plan des trous de jeu d'une flûte à bec imprimée"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/3d-woodwind-creations/20250127_013949.webp"
+                        alt="Flûte à bec imprimée en 3D terminée, tenue à la main"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/3d-woodwind-creations/3d-mouthpiece.webp"
+                        alt="Bec et pièces de tête de flûte à bec imprimés en 3D"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/3d-woodwind-creations/3dwoodwind-1.webp"
+                        alt="Flûte à bec bicolore imprimée en 3D, tenue à la main"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/3d-woodwind-creations/01-historical-woodwind-workbench.webp"
+                        alt="Instrument à vent historique sur un établi"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/3d-woodwind-creations/14-historical-flute-display-case.webp"
+                        alt="Flûte historique dans une vitrine d'exposition"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Image précédente"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Image suivante"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">
+                    FABRICATION / RECHERCHE ACOUSTIQUE
+                  </div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">Créations d'instruments à vent en 3D</h3>
+                  <p class="portfolio-project-description">
+                    En nous appuyant sur la musicologie historique et la science
+                    acoustique, nous reproduisons le caractère sonore
+                    d'instruments à vent historiques sans avoir besoin d'accéder
+                    aux originaux de musées ou de collections privées. Chaque
+                    recréation fait l'objet d'une vérification acoustique
+                    rigoureuse et d'essais expérimentaux.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    Voir l'étude de cas →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      De nombreux instruments à vent historiques n'existent que
+                      dans des collections de musées ou entre des mains privées,
+                      physiquement inaccessibles pour l'étude, l'interprétation ou
+                      la reproduction.
+                    </p>
+                    <p>
+                      Ce projet applique la musicologie historique et la science
+                      acoustique pour recréer les profils sonores de ces
+                      instruments à l'aide de la conception 3D et de la
+                      fabrication additive, sans avoir besoin d'accéder aux
+                      originaux.
+                    </p>
+                    <p>
+                      Chaque reproduction est soumise à une vérification
+                      acoustique rigoureuse et à des essais expérimentaux afin de
+                      valider sa fidélité aux références historiques.
+                    </p>
+                    <p>
+                      L'objectif est de rendre le son du passé accessible, autant
+                      aux chercheurs qu'aux pédagogues et aux interprètes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 4 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="../public/media/images/pages/portfolio/accessibility-winds-project/accessibility-winds-project2.webp"
+                        alt="Conception CAD des clés adaptatives de la flûte à bec"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Image précédente"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Image suivante"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">
+                    FABRICATION / COLLABORATION
+                  </div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">
+                    Projet d'instruments à vent accessibles
+                  </h3>
+                  <p class="portfolio-project-description">
+                    En collaboration avec la faculté de pédagogie musicale d'une
+                    université canadienne partenaire, IREM développe une flûte à
+                    bec soprano imprimée en 3D adaptée aux besoins d'accessibilité
+                    physique d'un élève. Ce projet réunit la conception
+                    adaptative, la fabrication additive et la pédagogie musicale.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    Voir l'étude de cas →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Ce projet a été lancé pour répondre à un besoin précis
+                      d'accessibilité : un élève ayant besoin d'un instrument à
+                      vent adapté à ses capacités physiques.
+                    </p>
+                    <p>
+                      En collaboration avec la faculté de pédagogie musicale d'une
+                      université canadienne partenaire, IREM conçoit et fabrique
+                      une flûte à bec soprano imprimée en 3D adaptée aux besoins
+                      de cet élève.
+                    </p>
+                    <p>
+                      Le projet tire parti de la capacité de la fabrication
+                      additive à itérer rapidement des géométries personnalisées,
+                      en ajustant le positionnement des clés, le poids de
+                      l'instrument et l'ergonomie d'une manière impossible avec la
+                      fabrication traditionnelle.
+                    </p>
+                    <p>
+                      Il se situe au carrefour de la conception inclusive, de la
+                      pédagogie musicale et de la recherche appliquée en
+                      fabrication.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 5 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="../public/media/images/pages/portfolio/materials-in-acoustic-research/materials-research-recorders.webp"
+                        alt="Flûtes à bec imprimées dans différents matériaux"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/materials-in-acoustic-research/05-instrument-cases-and-accessories.webp"
+                        alt="Matériaux et accessoires d'instruments"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Image précédente"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Image suivante"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">
+                    RECHERCHE / EN PRÉPARATION
+                  </div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">
+                    Matériaux d'impression 3D en recherche acoustique
+                  </h3>
+                  <p class="portfolio-project-description">
+                    Une étude en préparation visant à valider la qualité
+                    acoustique et la viabilité de production de la fabrication
+                    additive dans la création d'instruments à vent. La recherche
+                    vise à établir des données de référence pour les matériaux FDM
+                    et SLS comme substituts en fabrication acoustique.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    Voir l'étude de cas →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Cette étude est en préparation afin de répondre à une
+                      question fondamentale de la fabrication acoustique : la
+                      fabrication additive peut-elle produire des instruments à
+                      vent dont les propriétés acoustiques sont comparables à
+                      celles des matériaux traditionnels ?
+                    </p>
+                    <p>
+                      La recherche évaluera systématiquement des échantillons
+                      imprimés en FDM et en SLS par rapport à des repères
+                      acoustiques établis, en examinant des facteurs tels que la
+                      résonance des parois, le fini des surfaces internes,
+                      l'étanchéité à l'air et la réponse tonale.
+                    </p>
+                    <p>
+                      Les résultats visent à fournir des données de référence au
+                      domaine plus large de l'acoustique et à orienter les
+                      pratiques de fabrication d'IREM par la suite.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 6 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <img
+                    src="../public/media/images/pages/portfolio/3d-printed-flower/3d-flower.webp"
+                    alt="Fleur imprimée en 3D"
+                    class="portfolio-project-image"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                  <div class="portfolio-project-tag">
+                    FABRICATION / EXPLORATION
+                  </div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">Fleur imprimée en 3D</h3>
+                  <p class="portfolio-project-description">
+                    Une fleur décorative imprimée en résine transparente, une
+                    exploration du détail fin, de la translucidité et de la
+                    géométrie organique qui pousse notre fabrication additive
+                    au-delà du travail sur les instruments.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    Voir l'étude de cas →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Tous les projets ne sont pas des instruments. Cette pièce
+                      était un exercice d'impression de formes organiques et
+                      délicates : pétales fins, tiges courbées et surfaces
+                      translucides, difficiles à reproduire proprement en
+                      fabrication additive.
+                    </p>
+                    <p>
+                      Le travail en résine transparente nous a permis d'étudier
+                      comment la lumière traverse la géométrie imprimée et comment
+                      les détails fins tiennent à petite échelle, des leçons qui
+                      se répercutent directement sur notre travail de précision
+                      avec les instruments et les composants.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 7 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="../public/media/images/pages/portfolio/oboe-reed-shaper/reed-study2.webp"
+                        alt="Gabarit à anches de hautbois imprimé en 3D"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/oboe-reed-shaper/reed-study.webp"
+                        alt="Anches de hautbois terminées, façonnées avec l'outil imprimé"
+                        class="portfolio-project-image"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Image précédente"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Image suivante"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">FABRICATION / OUTILLAGE</div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">
+                    Gabarit à anches de hautbois imprimé en 3D
+                  </h3>
+                  <p class="portfolio-project-description">
+                    Un gabarit personnalisé imprimé en 3D qui façonne le roseau
+                    des anches de hautbois selon un profil précis, mettant à
+                    portée de main, grâce à la fabrication additive, un outil
+                    traditionnellement coûteux et difficile à trouver.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    Voir l'étude de cas →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Les hautboïstes façonnent leurs propres anches, et le
+                      gabarit qui définit le profil d'une anche est un outil
+                      précis (et souvent coûteux).
+                    </p>
+                    <p>
+                      IREM a conçu et imprimé en 3D un gabarit qui établit le
+                      profil de l'ébauche d'anche, ce qui permet d'expérimenter
+                      avec la géométrie des anches et d'étudier comment de petits
+                      changements influent sur la réponse et le timbre.
+                    </p>
+                    <p>
+                      C'est un petit outil au retentissement démesuré : itération
+                      plus rapide, coût plus bas et lien direct entre la
+                      fabrication et le jeu.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 8 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <div class="pg-carousel" data-carousel>
+                    <div class="pg-track">
+                      <img
+                        src="../public/media/images/pages/portfolio/string-instrument-modelling/string-model-spectrum.webp"
+                        alt="Spectre harmonique avec suppression par filtre en peigne"
+                        class="portfolio-project-image img-contain"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                      <img
+                        src="../public/media/images/pages/portfolio/string-instrument-modelling/string-model-combfilter.webp"
+                        alt="Réponse en amplitude du filtre en peigne"
+                        class="portfolio-project-image img-contain"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                      />
+                    </div>
+                    <button
+                      class="pg-nav pg-prev"
+                      type="button"
+                      aria-label="Image précédente"
+                    >
+                      ‹
+                    </button>
+                    <button
+                      class="pg-nav pg-next"
+                      type="button"
+                      aria-label="Image suivante"
+                    >
+                      ›
+                    </button>
+                    <div class="pg-dots"></div>
+                  </div>
+                  <div class="portfolio-project-tag">RECHERCHE / DSP</div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">
+                    Modélisation d'instruments à cordes
+                  </h3>
+                  <p class="portfolio-project-description">
+                    Modéliser comment la technique de jeu façonne le timbre d'un
+                    instrument à cordes pincées, et récupérer ces paramètres
+                    directement à partir d'un enregistrement. Le point où une
+                    corde est excitée imprime un motif de filtre en peigne sur le
+                    spectre harmonique, qui peut être analysé pour estimer la
+                    position de jeu.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    Voir l'étude de cas →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Lorsqu'une corde est pincée, le point d'excitation supprime
+                      certains harmoniques selon un motif régulier, en forme de
+                      peigne, une empreinte de l'endroit et de la manière dont la
+                      note a été jouée.
+                    </p>
+                    <p>
+                      Nous avons étudié le modèle de traitement du signal derrière
+                      cet effet ainsi qu'une méthode d'estimation qui récupère la
+                      position d'excitation à partir d'un seul son enregistré, au
+                      moyen d'une corrélation spectrale suivie d'un raffinement
+                      itératif du délai du filtre en peigne.
+                    </p>
+                    <p>
+                      Ce travail relie l'acoustique physique des cordes à
+                      l'analyse audio pratique, des fondations qui alimentent
+                      directement notre conception d'instruments et nos outils
+                      DSP.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 9 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <img
+                    src="../public/media/images/pages/portfolio/tuning-system-estimator/tuning-estimator.svg"
+                    alt="Profil de déviation d'accord par note"
+                    class="portfolio-project-image"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                  <div class="portfolio-project-tag">LOGICIEL / DSP</div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">Estimateur de système d'accord</h3>
+                  <p class="portfolio-project-description">
+                    Un logiciel qui écoute l'enregistrement d'un instrument à vent
+                    solo et estime son système d'accord, y compris la hauteur de
+                    référence (comme le A4) à laquelle il a été joué, en combinant
+                    le suivi de la fréquence fondamentale avec l'analyse MFCC et la
+                    transformée à Q constant (CQT).
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    Voir l'étude de cas →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Les instruments à vent, surtout les instruments historiques,
+                      ne sont pas construits selon le tempérament égal moderne, et
+                      les enregistrements sont réalisés à diverses hauteurs de
+                      référence. La manière dont chaque note s'écarte d'une grille
+                      d'accord encode l'instrument et son contexte d'accord.
+                    </p>
+                    <p>
+                      L'outil extrait un profil de déviation par hauteur à partir
+                      d'un enregistrement monophonique et classe les hauteurs de
+                      référence candidates au moyen de trois méthodes
+                      indépendantes : la densité du suivi de fréquence, des
+                      médianes robustes par note et l'alignement d'énergie à Q
+                      constant.
+                    </p>
+                    <p>
+                      Mis en œuvre en Python et en Rust, il a identifié la hauteur
+                      de référence correcte à un demi-ton près sur la grande
+                      majorité des enregistrements de test, un pas vers la
+                      caractérisation des instruments et de l'accord historique à
+                      partir du seul son.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 10 -->
+              <div class="portfolio-project-card">
+                <div class="portfolio-project-image-wrapper">
+                  <img
+                    src="../public/media/images/pages/portfolio/performer-motion-gaze-tracking/motion-gaze.svg"
+                    alt="Suivi de la pose de la tête, des points de repère faciaux et du regard"
+                    class="portfolio-project-image"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                  <div class="portfolio-project-tag">LOGICIEL / IHM</div>
+                </div>
+                <div class="portfolio-project-content">
+                  <h3 class="portfolio-project-title">
+                    Suivi du mouvement et du regard des interprètes
+                  </h3>
+                  <p class="portfolio-project-description">
+                    Un système en temps réel qui suit la pose de la tête, les
+                    points de repère faciaux et la direction du regard d'un
+                    interprète à partir d'une vidéo ordinaire, un outil pour
+                    étudier comment les musiciens bougent, regardent et donnent des
+                    signaux pendant qu'ils jouent.
+                  </p>
+                  <button
+                    type="button"
+                    class="portfolio-project-link"
+                    aria-expanded="false"
+                  >
+                    Voir l'étude de cas →
+                  </button>
+                  <div class="portfolio-case-study-content">
+                    <p>
+                      Les musiciens communiquent et se coordonnent au moyen de
+                      signaux physiques subtils (mouvement de la tête, regard et
+                      posture) qui sont rarement mesurés directement.
+                    </p>
+                    <p>
+                      Bâti sur des outils de vision par ordinateur à code source
+                      ouvert, ce système capte l'orientation de la tête, les points
+                      de repère faciaux et le regard en temps réel et les consigne
+                      pour analyse, sans matériel spécialisé de capture de
+                      mouvement.
+                    </p>
+                    <p>
+                      Il ouvre la voie à l'étude du mouvement et du geste des
+                      interprètes, pour la recherche sur l'interaction d'ensemble,
+                      la pédagogie et l'interprétation expressive.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="portfolio-cta-section">
+          <div class="portfolio-cta-content">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#4F46E5"
+              stroke-width="2"
+              class="portfolio-cta-icon"
+            >
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+              />
+            </svg>
+            <h2 class="portfolio-cta-title">Un défi technique ?</h2>
+            <p class="portfolio-cta-description">
+              Notre équipe est prête à discuter de projets d'ingénierie et de
+              recherche sur mesure.
+            </p>
+            <a href="contact.html" class="cta-button">Nous contacter</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>© 2026 IREM. Tous droits réservés.</p>
+        <p data-contact="address">Montréal, Québec, Canada</p>
+        <p>
+          <a href="privacy-policy.html" class="footer-link"
+            >Politique de confidentialité</a
+          >
+          <span class="footer-separator">|</span>
+          <a href="terms-of-service.html" class="footer-link"
+            >Conditions d'utilisation</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/portfolio.js"></script>
+  </body>
+</html>

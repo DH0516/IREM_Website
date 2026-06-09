@@ -1,54 +1,30 @@
-# Node
-node_modules/
-npm-debug.log*
-yarn-error.log*
-package-lock.json
-yarn.lock
+# ── IREM static site .gitignore ──────────────────────────────
 
-# Builds
-build/
-dist/
-android/app/build/
-ios/build/
-ios/DerivedData/
-
-# Environnements
-.env
-.env.*
-firebase-key.json
-google-services.json
-GoogleService-Info.plist
-
-# React Native / Expo
-.expo/
-.expo-shared/
-metro-cache/
-*.jsbundle
-*.map
-
-# Client
-Client/build/
-Client/dist/
-
-# Serveur
-Serveur/build/
-Serveur/dist/
-Serveur/lib/
-
-# IDE / OS
-.idea/
-.vscode/
+# OS / editor cruft
 .DS_Store
 Thumbs.db
+.idea/
+.vscode/
+*.swp
 
-# Android
-.gradle/
-local.properties
+# Scratch / temp
+tmp/
+
+# Source images (raw AI generations, original photos, archived candidates).
+# These are NOT part of the site — only the optimized .webp under
+# public/media/images/pages/ and shared/ are referenced and shipped.
+# Kept out of git so they can never be accidentally committed or published.
+public/media/images/ai-generated/
+public/media/images/real-photos/
+public/media/images/archive/
+
+# Secrets — never commit
+.env
+.env.*
+*.pem
 *.keystore
-!debug.keystore
-.cxx/
-*.iml
-*.hprof
+firebase-key.json
+google-services.json
 
 # Xcode
 xcuserdata/
@@ -78,3 +54,7 @@ logs/
 .dev.vars*
 !.dev.vars.example
 !.env.example
+
+# Node (only relevant if tooling is added later)
+node_modules/
+npm-debug.log*
