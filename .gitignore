@@ -1,31 +1,29 @@
-# ── IREM static site .gitignore ──────────────────────────────
-
-# OS / editor cruft
+# Editor files
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
 *.swp
 
-# Scratch / temp
+# Local work and test artifacts
 tmp/
+__pycache__/
 
-# Source images (raw AI generations, original photos, archived candidates).
-# These are NOT part of the site — only the optimized .webp under
-# public/media/images/pages/ and shared/ are referenced and shipped.
-# Kept out of git so they can never be accidentally committed or published.
+# Original images stay outside the public snapshot.
 public/media/images/ai-generated/
 public/media/images/real-photos/
 public/media/images/archive/
 
-# Secrets — never commit
+# Credentials
 .env
 .env.*
+!.env.template
 *.pem
 *.keystore
 firebase-key.json
 google-services.json
 
-# Node (only relevant if tooling is added later)
+# Local Node tools
 node_modules/
 npm-debug.log*
+.venv/

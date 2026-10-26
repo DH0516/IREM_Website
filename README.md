@@ -1,185 +1,90 @@
 # IREM Website
 
-Static website for the **Institut de Recherche et Exploration Musicale** (IREM).  
-Built with plain HTML, CSS, and vanilla JavaScript — no framework, no build step.
+IREM's English and French website uses HTML, CSS, and JavaScript. The primary address is [irem.page](https://irem.page/). [GitHub Pages](https://dh0516.github.io/IREM_Website/) serves a second copy.
 
-## Project Structure
+## Source and public snapshot
 
-```
-index.html            Home
-about.html            About
-services.html         Services
-portfolio.html        Projects & Case Studies
-contact.html          Contact (email — no form)
-privacy-policy.html   Privacy Policy
-terms-of-service.html Terms of Service
-404.html              Custom not-found page (noindex)
-css/style.css         All styles (layout, dark mode, responsive)
-js/config.js          Contact details + runtime email assembly (anti-scrape)
-js/main.js            Dark mode, burger menu, EN/FR language switcher
-js/portfolio.js       Portfolio case study expand/collapse
-public/media/         Images and assets
-.nojekyll             Disables Jekyll processing on GitHub Pages
-```
+Develop in `DH0516/IREM_Website-private`. The public repository, `DH0516/IREM_Website`, contains the committed site files selected by `scripts/git/public-site-paths.txt`. Internal documents, scripts, tests, credentials, and original image folders are excluded.
 
-Live URL: **https://dh0516.github.io/IREM_Website/** (default GitHub Pages, no custom domain).
+Make changes on a dated private branch and open a PR to private `main`. Keep English pages at the root and French pages in `fr/` consistent. Both languages share `css/style.css` and the scripts in `js/`.
 
-## Running locally
+| File | Purpose |
+| --- | --- |
+| `index.html`, `about.html`, `services.html`, `portfolio.html` | Site content |
+| `contact.html`, `privacy-policy.html`, `terms-of-service.html` | Contact and policies |
+| `fr/` | French pages |
+| `js/config.js` | Contact details |
+| `js/main.js` | Theme, mobile menu, logo selection, and manual image galleries |
+| `docs/design.md` | Design choices and reference guidance |
+| `public/media/images/pages/`, `public/media/images/shared/` | Published images |
+| `404.html`, `fr/404.html` | Error pages |
+| `_headers` | Cloudflare response headers |
+| `.nojekyll` | Serve static files directly on GitHub Pages |
 
-No build step needed. Open any `.html` file directly in a browser, or serve with:
+## Local preview and checks
 
-```bash
-python -m http.server 3000
+No build step is needed. Open a terminal in the repository directory, `/mnt/511GB/IREM_Website-private` on this machine, and run:
+
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-## Git Workflow
+Open [English](http://127.0.0.1:8000/) or [French](http://127.0.0.1:8000/fr/) in your browser. Keep the terminal open while previewing; press Ctrl+C to stop the server. Run the same command again to restart it. The server listens only on this machine.
 
-1. Pull latest `main`
+Refresh the browser after editing files; this server does not refresh open pages automatically.
 
-   ```bash
-   git checkout main && git pull origin main
-   ```
+The checks run from the private repository and require Python 3.12 or later, Node.js 22.13 or a supported later release, Git, and Firefox. Install the development tools and enable the commit check once after cloning:
 
-2. Create a new branch named today's date
-
-   ```bash
-   git checkout -b YYYYMMDD-FeatureName
-   ```
-
-3. Do your work, commit, push
-
-   ```bash
-   git push -u origin YYYYMMDD-FeatureName
-   ```
-
-4. Open a PR on GitHub: `YYYYMMDD-FeatureName` → `main`
-
-5. A maintainer reviews and merges
-
----
-
-## Deployment (GitHub Pages)
-
-There are two repos:
-
-- `DH0516/IREM_Website-private` is the private working repo.
-- `DH0516/IREM_Website` is the public live repo.
-
-The public repo is a clean site snapshot, not a mirror of this private repo.
-GitHub Pages is configured on the public repo with **Source = branch `main`,
-folder `/ (root)`**, and `main` is protected so direct pushes do not deploy live.
-
-### Public publish flow
-
-1. Make and commit changes in the private repo as usual.
-2. Push the private branch normally, for example:
-
-   ```powershell
-   git push origin HEAD:main
-   ```
-
-3. Publish a clean snapshot of the committed site to the public repo's `dev`
-   branch:
-
-   ```powershell
-   .\scripts\git\publish-public.ps1 -Ref HEAD -CreatePr
-   ```
-
-4. Review the PR from `dev` to `main` in `DH0516/IREM_Website`.
-5. Merge that PR to deploy the live site.
-
-If you want one command for both pushes, use:
-
-```powershell
-.\scripts\git\push-both.ps1 -PrivateRefSpec HEAD:main -PublicRef HEAD -CreatePr
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+npm ci --ignore-scripts
+git config core.hooksPath .githooks
 ```
 
-That pushes the private repo first, then publishes the public snapshot to
-`public/dev`.
+`npm run lint` runs [Ruff](https://docs.astral.sh/ruff/configuration/) for Python, [ESLint](https://eslint.org/docs/latest/use/configure/configuration-files) for JavaScript, the [deslop scanner](https://github.com/dabit3/deslop) from the AI-Deslopper collection, and the site validator. The rules live in `ruff.toml`, `eslint.config.mjs`, `scripts/deslop.mjs`, and `scripts/validate.py`. Deslop blocks its high-severity findings. AI-Deslopper rules that depend on design or intent still require review. The pre-commit hook rejects commits when lint fails, and CI runs the same command. Dependencies are pinned; these are development tools and add nothing to the served website.
 
-### Public snapshot contents
+Run the checks:
 
-The public snapshot is defined by `scripts/git/public-site-paths.txt`. Only those
-paths are exported, which keeps internal docs and helper scripts out of the public
-repo.
-
-### GitHub Pages settings
-
-1. In the public repo, keep **Settings → Pages → Source = Deploy from a branch**,
-   branch `main`, folder **`/ (root)`**.
-2. Enable **Enforce HTTPS**.
-3. The site is served at **https://dh0516.github.io/IREM_Website/** — no custom
-   domain, no DNS, nothing to pay for. The `og:url` tags already point here.
-   - _Want a custom domain later?_ Buy one, add a `CNAME` file containing the
-     domain, point its DNS at GitHub Pages, and update every `og:url`.
-4. `.nojekyll` (repo root) disables Jekyll so files are served verbatim.
-5. A custom `404.html` is served automatically for unknown routes.
-
-> **Why GitHub Pages and not Cloudflare Pages?** The site is fully static with no
-> backend and no contact form — visitors reach IREM by email — so the free GitHub
-> Pages tier is sufficient. The anti-scrape email handling that previously relied
-> on Cloudflare's "Email Address Obfuscation" is now done in `js/config.js` (the
-> address is reassembled at runtime and never appears as a literal string in any
-> served file).
-
----
-
-## Contact & Security
-
-There is **no contact form and no third-party services** — the site is 100%
-static. Visitors reach IREM by email, via a runtime-built `mailto:` link. This
-removes all the spam/captcha surface a form would create.
-
-### Email obfuscation (anti-scrape)
-
-The contact email is never written as a literal string in any `.html`/`.js` file.
-`js/config.js` stores it as separate `emailUser` / `emailDomain` parts and
-reassembles it at runtime. It then:
-
-- fills every `[data-contact='email']` element with a `mailto:` link that shows
-  the address (studio card, legal pages), and
-- sets the `href` of every `[data-contact='email-button']` anchor (the "Email Us"
-  button on `contact.html`) without ever printing the address as text.
-
-To change the address, edit those two values in `js/config.js` — that's the only
-place it lives.
-
-> Verify nothing leaked after editing: searching the served files for the literal
-> address should return **zero** matches, while the address still renders in the
-> browser. Note: with `.nojekyll`, GitHub Pages serves Markdown files too, so keep
-> the literal address out of `*.md` as well (or out of the deployed branch).
-
-### Content-Security-Policy
-
-Every page sets a strict CSP via a `<meta http-equiv="Content-Security-Policy">`
-tag (GitHub Pages can't send custom HTTP headers):
-
-```
-default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'
+```sh
+npm run lint
+python3 -m unittest discover -s tests -p 'test_*.py'
+node --test tests/browser.test.mjs
 ```
 
-All scripts and styles are first-party, and there are no inline `style`/`script`
-attributes (the CTA-centering style lives in `css/style.css`), so the policy needs
-no `'unsafe-inline'` exceptions.
+Browser tests use an isolated Firefox profile and a local server. Test artifacts stay in the ignored `tmp/` directory. They cover storage failures, logo selection and image failures, menu state, matching language links, project details, manual galleries, both themes at narrow and wide widths, image loading, and nested 404 pages. Publishing tests use local Git repositories.
 
-### Analytics (optional)
+## Publishing
 
-No analytics are included. If you want privacy-friendly stats without a backend,
-add a hosted counter (e.g. GoatCounter or Plausible) and extend the CSP
-`script-src`/`connect-src` to allow its domain.
+Publishing requires GitHub CLI authentication and write access to the public repository. Configure its remote once in the private repository:
 
----
-
-## SEO
-
-Every page includes:
-
-```html
-<meta name="description" content="..." />
-<meta property="og:title" content="..." />
-<meta property="og:description" content="..." />
-<meta property="og:url" content="https://irem.ca/..." />
-<meta property="og:type" content="website" />
+```sh
+git remote add public https://github.com/DH0516/IREM_Website.git
 ```
 
-Update the `og:url` values once the production domain is confirmed.
+After validation, commit the private changes. Preview the selected files, then publish a review branch:
+
+```sh
+python3 scripts/git/publish-public.py --ref HEAD --dry-run
+python3 scripts/git/publish-public.py --ref HEAD --create-pr
+```
+
+The publisher starts from public `main`, replaces its tracked site files, and pushes public `dev`. It checks the remote branch tip before replacing an earlier snapshot. Review and merge the public PR to update the GitHub Pages copy.
+
+On a push to private `main`, the deployment workflow first runs the static, publishing, and browser checks. If they pass and `PUBLIC_DEPLOY_TOKEN` is configured, it creates and merges a public deployment PR. The token needs contents and pull-request write access to `DH0516/IREM_Website`. Without it, validation runs and deployment is skipped with a warning.
+
+GitHub Pages serves public `main` from the repository root. The Cloudflare Pages project `irem` serves `irem.page`, `www.irem.page`, and `irem.pages.dev`, as recorded in the private operations notes. Deployment connection settings are managed in the hosting accounts.
+
+## Contact, privacy, and browser behavior
+
+Visitors contact IREM by email. `js/config.js` builds the email links from separate address parts. This prevents simple literal-string matching; it does not hide the address from software that runs JavaScript.
+
+The site stores the selected theme in local storage and the last displayed logo in tab-scoped session storage. Each tab starts with the original IREM logo image; later refreshes and page visits choose a different image from the original and three distinct existing variants. Both the header and footer use self-contained logo-only SVG files built from the existing images. Full-name images and the serif text wordmark are never logo choices. The original navy badge retains its color with clean edges; the other marks have transparent backgrounds and use light ink in dark mode. A variant replaces the visible image only after loading successfully. When session storage is blocked, the default logo remains. Theme switching and navigation still work when storage is unavailable. EN/FR language links and the moon/sun theme control are in the footer's final row, with accessible labels. Project details use native expandable sections, and galleries move only when the visitor uses them. Reduced-motion preferences disable smooth gallery scrolling.
+
+The design uses IREM's existing navy identity, project photographs, and software screenshots. See [the design notes](docs/design.md) for layout and typography choices. Navigation and project details work without site scripts.
+
+The site includes no analytics. `_headers` sets `Cache-Control: public, max-age=0, must-revalidate, no-transform` to prevent Cloudflare's automatic beacon injection. See [Cloudflare's explanation](https://developers.cloudflare.com/web-analytics/faq/).
+
+Pages restrict scripts and styles to the site's origin. Each 404 page additionally permits its small inline root initializer through an exact CSP hash. This lets nested missing URLs resolve assets on both hosting paths. If that initializer changes, update its hash; validation checks it.
+
+Metadata uses `https://irem.page/` as the primary address. Private historical plans, image prompts, and copy are stored in `docs/archive/` and excluded from publication. Use this README for current setup and publishing commands.

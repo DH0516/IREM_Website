@@ -15,161 +15,81 @@
     />
     <meta property="og:title" content="Contact | IREM" />
     <meta property="og:description" content="Bâtissons quelque chose ensemble." />
-    <meta property="og:url" content="https://dh0516.github.io/IREM_Website/fr/contact.html" />
+    <meta property="og:url" content="https://irem.page/fr/contact" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://dh0516.github.io/IREM_Website/public/media/images/shared/branding/IREM_Logo.png" />
-    <link rel="alternate" hreflang="en" href="https://dh0516.github.io/IREM_Website/contact.html" />
-    <link rel="alternate" hreflang="fr" href="https://dh0516.github.io/IREM_Website/fr/contact.html" />
-    <link rel="alternate" hreflang="x-default" href="https://dh0516.github.io/IREM_Website/contact.html" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <meta property="og:image" content="https://irem.page/public/media/images/shared/branding/IREM_Logo.png" />
+    <link rel="alternate" hreflang="en" href="https://irem.page/contact" />
+    <link rel="alternate" hreflang="fr" href="https://irem.page/fr/contact" />
+    <link rel="alternate" hreflang="x-default" href="https://irem.page/contact" />
+    <link rel="canonical" href="https://irem.page/fr/contact" />
+    <link rel="stylesheet" href="../css/style.css?v=7c64a0c80d" />
   </head>
   <body>
-    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <a class="skip-link" href="#main">Aller au contenu</a>
     <header class="navbar-wrapper">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          <img
-            src="../public/media/images/shared/branding/IREM_Logo.png"
-            alt="Logo IREM"
-            width="24"
-            height="24"
-          />
-          <div class="logo-copy">
-            <span class="logo-name">IREM</span>
-            <span class="logo-tagline"
-              >Institut de Recherche et Exploration Musicale</span
-            >
-          </div>
-        </a>
-
-        <div class="nav-links" id="nav-links">
-          <a href="index.html" data-i18n="home">Accueil</a>
-          <a href="about.html" data-i18n="about">À propos</a>
-          <a href="services.html" data-i18n="services">Services</a>
-          <a href="portfolio.html" data-i18n="projects">Projets</a>
-          <a href="contact.html" data-i18n="contact">Contact</a>
-          <div class="language_select_wrap">
-            <select
-              id="lang-select"
-              class="language_select"
-              aria-label="Sélecteur de langue"
-            >
-              <option value="../contact.html">English</option>
-              <option value="contact.html" selected>Français</option>
-            </select>
-          </div>
+      <nav class="navbar" aria-label="Navigation principale">
+        <div class="logo">
+          <a href="index.html" class="logo-name" data-logo="default"><img src="../public/media/images/shared/branding/IREM_Logo.svg?v=81c1b0518d" alt="IREM" width="303" height="303"></a>
+          <p class="logo-tagline">Institut de Recherche et Exploration Musicale</p>
         </div>
-
         <div class="nav-controls">
-          <button
-            id="theme-toggle"
-            class="theme-toggle"
-            type="button"
-            aria-label="Basculer le mode sombre"
-          >
-            ☾
-          </button>
-          <button id="burger" class="burger" type="button" aria-label="Menu">
-            ☰
-          </button>
+          <button id="burger" class="burger" type="button" aria-expanded="false" aria-controls="nav-links" hidden>Menu</button>
+        </div>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="portfolio.html">Projets</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">À propos</a>
+          <a href="contact.html" aria-current="page">Contact</a>
         </div>
       </nav>
     </header>
 
-    <!-- ── MAIN ───────────────────────────────────────────── -->
-    <main>
+    <main id="main" tabindex="-1">
       <div class="contact-page">
         <div class="contact-container">
-          <!-- Invitation -->
           <div class="contact-form-section">
-            <h1 class="contact-title">Bâtissons quelque chose ensemble.</h1>
-            <p class="contact-description">
-              Parlez-nous de votre projet : logiciel, fabrication ou recherche
-              acoustique. La meilleure façon de nous joindre est par courriel, et
-              notre équipe répond généralement dans un délai de 2 jours ouvrables.
-            </p>
-            <p class="contact-description">
-              Lorsque vous nous écrivez, il est utile d'inclure une brève
-              description de ce que vous construisez, votre organisation (le cas
-              échéant) et votre échéancier.
-            </p>
-            <a href="#" data-contact="email-button" class="cta-button"
-              >Écrivez-nous →</a
-            >
+            <h1 class="contact-title">Joindre IREM</h1>
+            <p class="contact-description">Écrivez-nous au sujet de votre projet de logiciel, de fabrication ou de recherche acoustique.</p>
+            <p class="contact-description">Indiquez ce que vous souhaitez réaliser, votre organisation s’il y a lieu, ainsi que votre échéancier.</p>
+            <a href="#" data-contact="email-button" class="cta-button" hidden>Envoyer un courriel</a>
+            <noscript><p>Adresse : irem25qc, sur Gmail.</p></noscript>
           </div>
-
-          <!-- Info -->
           <div class="contact-info-section">
-            <div class="contact-studios">
-              <h3 class="contact-studios-title">NOTRE STUDIO</h3>
-
-              <div class="studio-card">
-                <div class="studio-icon-wrapper">
-                  <div class="studio-icon">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#4F46E5"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
-                      />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="studio-info">
-                  <h4 class="studio-name">Siège de Montréal</h4>
-                  <p class="studio-address" data-contact="address">
-                    Montréal, Québec, Canada
-                  </p>
-                  <p class="studio-email">
-                    Courriel de contact général :
-                    <span data-contact="email"></span>
-                  </p>
-                </div>
-              </div>
-
-              <figure class="contact-location-figure">
-                <img
-                  src="../public/media/images/pages/contact/contact-background.webp"
-                  alt="Vue de la ville de Montréal et de son fleuve"
-                  class="contact-location-image"
-                  width="2816"
-                  height="1536"
-                  loading="lazy"
-                />
-                <figcaption class="contact-location-caption">
-                  Établis à Montréal, Québec.
-                </figcaption>
-              </figure>
-            </div>
+            <h2>Par courriel</h2>
+            <p data-contact="email"></p>
+            <p>Nous répondons généralement dans un délai de deux jours ouvrables.</p>
+            <h3>À Montréal</h3>
+            <p data-contact="address">Montréal, Québec, Canada</p>
+            <p>Institut de Recherche et Exploration Musicale</p>
           </div>
         </div>
       </div>
     </main>
 
-    <!-- ── FOOTER ─────────────────────────────────────────── -->
     <footer class="footer">
       <div class="footer-inner">
-        <p>© 2026 IREM. Tous droits réservés.</p>
-        <p data-contact="address">Montréal, Québec, Canada</p>
-        <p>
-          <a href="privacy-policy.html" class="footer-link"
-            >Politique de confidentialité</a
-          >
-          <span class="footer-separator">|</span>
-          <a href="terms-of-service.html" class="footer-link"
-            >Conditions d'utilisation</a
-          >
-        </p>
+        <div class="footer-brand">
+          <a href="index.html" class="logo-name"><img src="../public/media/images/shared/branding/IREM_Logo.svg?v=81c1b0518d" alt="IREM" width="303" height="303"></a>
+          <p>Institut de Recherche et Exploration Musicale</p>
+          <p data-contact="address">Montréal, Québec, Canada</p>
+        </div>
+        <div class="footer-links">
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Politique de confidentialité</a>
+          <a href="terms-of-service.html">Conditions d’utilisation</a>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 IREM</p>
+          <div class="nav-controls">
+            <a class="language-link" href="../contact.html" lang="en" hreflang="en" aria-label="English" title="English">EN</a>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Mode sombre" aria-pressed="false" hidden><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+          </div>
+        </div>
       </div>
     </footer>
 
     <script src="../js/config.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js?v=394c804202"></script>
   </body>
 </html>
