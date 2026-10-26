@@ -16,286 +16,96 @@
     <meta property="og:title" content="À propos | IREM" />
     <meta
       property="og:description"
-      content="Ingénieurs par curiosité, bâtisseurs par métier."
+      content="Musique, logiciels et fabrication d'instruments."
     />
-    <meta property="og:url" content="https://dh0516.github.io/IREM_Website/fr/about.html" />
+    <meta property="og:url" content="https://irem.page/fr/about" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://dh0516.github.io/IREM_Website/public/media/images/shared/branding/IREM_Logo.png" />
-    <link rel="alternate" hreflang="en" href="https://dh0516.github.io/IREM_Website/about.html" />
-    <link rel="alternate" hreflang="fr" href="https://dh0516.github.io/IREM_Website/fr/about.html" />
-    <link rel="alternate" hreflang="x-default" href="https://dh0516.github.io/IREM_Website/about.html" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <meta property="og:image" content="https://irem.page/public/media/images/shared/branding/IREM_Logo.png" />
+    <link rel="alternate" hreflang="en" href="https://irem.page/about" />
+    <link rel="alternate" hreflang="fr" href="https://irem.page/fr/about" />
+    <link rel="alternate" hreflang="x-default" href="https://irem.page/about" />
+    <link rel="canonical" href="https://irem.page/fr/about" />
+    <link rel="stylesheet" href="../css/style.css?v=7c64a0c80d" />
   </head>
   <body>
-    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <a class="skip-link" href="#main">Aller au contenu</a>
     <header class="navbar-wrapper">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          <img
-            src="../public/media/images/shared/branding/IREM_Logo.png"
-            alt="Logo IREM"
-            width="24"
-            height="24"
-          />
-          <div class="logo-copy">
-            <span class="logo-name">IREM</span>
-            <span class="logo-tagline"
-              >Institut de Recherche et Exploration Musicale</span
-            >
-          </div>
-        </a>
-
-        <div class="nav-links" id="nav-links">
-          <a href="index.html" data-i18n="home">Accueil</a>
-          <a href="about.html" data-i18n="about">À propos</a>
-          <a href="services.html" data-i18n="services">Services</a>
-          <a href="portfolio.html" data-i18n="projects">Projets</a>
-          <a href="contact.html" data-i18n="contact">Contact</a>
-          <div class="language_select_wrap">
-            <select
-              id="lang-select"
-              class="language_select"
-              aria-label="Sélecteur de langue"
-            >
-              <option value="../about.html">English</option>
-              <option value="about.html" selected>Français</option>
-            </select>
-          </div>
+      <nav class="navbar" aria-label="Navigation principale">
+        <div class="logo">
+          <a href="index.html" class="logo-name" data-logo="default"><img src="../public/media/images/shared/branding/IREM_Logo.svg?v=81c1b0518d" alt="IREM" width="303" height="303"></a>
+          <p class="logo-tagline">Institut de Recherche et Exploration Musicale</p>
         </div>
-
         <div class="nav-controls">
-          <button
-            id="theme-toggle"
-            class="theme-toggle"
-            type="button"
-            aria-label="Basculer le mode sombre"
-          >
-            ☾
-          </button>
-          <button id="burger" class="burger" type="button" aria-label="Menu">
-            ☰
-          </button>
+          <button id="burger" class="burger" type="button" aria-expanded="false" aria-controls="nav-links" hidden>Menu</button>
+        </div>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="portfolio.html">Projets</a>
+          <a href="services.html">Services</a>
+          <a href="about.html" aria-current="page">À propos</a>
+          <a href="contact.html">Contact</a>
         </div>
       </nav>
     </header>
 
-    <!-- ── MAIN ───────────────────────────────────────────── -->
-    <main>
+    <main id="main" tabindex="-1">
       <div class="about-page">
-        <!-- Hero -->
         <section class="about-hero">
-          <img
-            src="../public/media/images/pages/about/hero/10-woodwind-maker-workbench.webp"
-            alt="Atelier d'ingénierie"
-            class="about-hero-bg"
-            width="1600"
-            height="900"
-          />
-          <div class="about-hero-overlay">
-            <div class="about-hero-content">
-              <h1 class="about-hero-title">
-                Ingénieurs par curiosité,<br />bâtisseurs par métier.
-              </h1>
-              <p class="about-hero-description">
-                Nous unissons la pensée informatique au savoir-faire physique,
-                des lignes de code aux couches de filament.
-              </p>
-            </div>
-          </div>
+          <h1 class="about-hero-title">À propos d’IREM</h1>
+          <p class="about-hero-description">Des musiciens et des ingénieurs réunis autour des logiciels, de la fabrication et de la recherche acoustique.</p>
         </section>
-
-        <!-- Our Story -->
         <section class="story-section">
           <div class="story-container">
             <div class="story-content">
-              <h2 class="philosophy-title capitalize">notre histoire</h2>
-              <p class="story-text">
-                Fondé à Montréal en 2025, l'Institut de Recherche et
-                Exploration Musicale (IREM) est né au carrefour de la musique,
-                de l'ingénierie et de la fabrication. L'idée mûrissait depuis
-                des années, née de la frustration de voir d'excellents
-                problèmes créatifs et techniques rester sans solution parce que
-                personne n'acceptait de travailler dans les deux mondes à la
-                fois. À la fin de 2024, une subvention du Conseil des arts et
-                des lettres du Québec (CALQ) a donné à l'équipe la
-                reconnaissance et l'élan nécessaires pour concrétiser le projet.
-              </p>
-              <p class="story-text">
-                Aujourd'hui, IREM est une organisation canadienne d'ingénierie
-                et de R&amp;D, qui livre des plateformes logicielles, des
-                prototypes fabriqués en 3D et des recherches en acoustique à des
-                clients et à des partenaires institutionnels. Notre philosophie
-                demeure inchangée : si ce n'est pas aussi bien conçu que ça
-                sonne, ça ne sort pas.
-              </p>
-              <h3 class="story-label capitalize">4 AXES DE SERVICES</h3>
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <div class="stat-number">01</div>
-                  <div class="stat-label">Développement d'applications</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">02</div>
-                  <div class="stat-label">Prototypage 3D</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">03</div>
-                  <div class="stat-label">Fabrication additive</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">04</div>
-                  <div class="stat-label">R&amp;D acoustique</div>
-                </div>
-              </div>
+              <h2>Institut de Recherche et Exploration Musicale</h2>
+              <p class="story-text">Fondé à Montréal en 2025, IREM travaille dans les domaines de la musique, de l'ingénierie et de la fabrication. Une subvention du Conseil des arts et des lettres du Québec (CALQ), obtenue à la fin de 2024, a aidé l'équipe à créer l'organisation.</p>
+              <p class="story-text">Nous développons des logiciels, fabriquons des prototypes en 3D et menons des recherches en acoustique pour des clients et des partenaires institutionnels.</p>
+              <a href="portfolio.html" class="btn-link">Voir nos projets</a>
             </div>
-            <div class="story-image">
-              <div
-                class="fade-slideshow story-logo-slideshow"
-                data-fade-slideshow
-                data-slideshow-auto="5000"
-                data-slideshow-alt="Concepts alternatifs du logo IREM"
-              >
-                  <img
-                    src="../public/media/images/pages/about/story/logo-concept-01.webp"
-                    alt="Concepts alternatifs du logo IREM"
-                    width="1022"
-                    height="1022"
-                  />
-                  <img
-                    src="../public/media/images/pages/about/story/logo-concept-02.webp"
-                    alt=""
-                    width="1022"
-                    height="1022"
-                    loading="lazy"
-                  />
-                  <img
-                    src="../public/media/images/pages/about/story/logo-concept-03.webp"
-                    alt=""
-                    width="1022"
-                    height="1022"
-                    loading="lazy"
-                  />
-                  <img
-                    src="../public/media/images/pages/about/story/logo-concept-04.webp"
-                    alt=""
-                    width="1022"
-                    height="1022"
-                    loading="lazy"
-                  />
-              </div>
-            </div>
+            <figure class="story-image">
+              <img src="../public/media/images/pages/services/additive-manufacturing/3d-printing.webp" alt="Pièce d’instrument à vent en cours d’impression 3D" width="1600" height="2134" loading="lazy">
+              <figcaption>Fabrication additive d’une pièce d’instrument à vent.</figcaption>
+            </figure>
           </div>
         </section>
-
-        <!-- Philosophy -->
         <section class="philosophy-section">
-          <div class="philosophy-container">
-            <h2 class="philosophy-title capitalize">Notre philosophie</h2>
-            <div class="philosophy-grid">
-              <div class="philosophy-card">
-                <div class="philosophy-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#4F46E5"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="philosophy-card-title">Précision d'ingénierie</h3>
-                <p class="philosophy-card-text">
-                  Nous construisons avec intention. Qu'il s'agisse d'écrire des
-                  algorithmes DSP ou de concevoir un instrument à vent imprimé
-                  en 3D, chaque décision repose sur une rigueur technique.
-                </p>
-              </div>
-
-              <div class="philosophy-card">
-                <div class="philosophy-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#4F46E5"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M9 18V5l12-2v13M9 18c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"
-                    />
-                    <circle cx="18" cy="16" r="3" />
-                  </svg>
-                </div>
-                <h3 class="philosophy-card-title">Profondeur créative</h3>
-                <p class="philosophy-card-text">
-                  La technologie est plus puissante lorsqu'elle est au service de
-                  l'expression humaine. Nos projets vivent souvent au carrefour
-                  de la science et de l'art.
-                </p>
-              </div>
-
-              <div class="philosophy-card">
-                <div class="philosophy-icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#4F46E5"
-                    stroke-width="2"
-                  >
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                  </svg>
-                </div>
-                <h3 class="philosophy-card-title">Axé sur la recherche</h3>
-                <p class="philosophy-card-text">
-                  Nous ne nous contentons pas de livrer des produits : nous
-                  étudions la science qui les sous-tend. Notre R&amp;D nourrit
-                  tout ce que nous créons.
-                </p>
-              </div>
-            </div>
+          <h2>Notre travail</h2>
+          <div class="philosophy-grid">
+            <div class="philosophy-card"><h3>Traitement du signal</h3><p class="philosophy-card-text">Nous développons des algorithmes de traitement du signal et des logiciels d'analyse de hauteur et d'autres applications musicales.</p><a class="btn-link" href="portfolio.html#advanced-tuner-app">Voir le projet</a></div>
+            <div class="philosophy-card"><h3>Conception d'instruments</h3><p class="philosophy-card-text">Nous concevons et imprimons en 3D des instruments à vent, notamment des reproductions historiques et des flûtes à bec adaptées.</p><a class="btn-link" href="portfolio.html#3d-woodwind-creations">Voir le projet</a></div>
+            <div class="philosophy-card"><h3>Recherche acoustique</h3><p class="philosophy-card-text">Nos travaux portent sur l'acoustique, la science des instruments de musique et la fabrication additive appliquée aux instruments.</p><a class="btn-link" href="portfolio.html#materials-in-acoustic-research">Voir le projet</a></div>
           </div>
         </section>
-
-        <!-- CTA -->
         <section class="cta-section">
-          <div class="cta-content">
-            <h2 class="cta-title">Prêt à bâtir quelque chose de concret ?</h2>
-            <p class="cta-description">
-              Que vous ayez besoin d'un partenaire logiciel, d'un atelier de
-              fabrication ou d'un collaborateur de recherche, notre équipe est
-              prête à vous écouter.
-            </p>
-            <a href="contact.html" class="cta-button">Nous joindre</a>
-          </div>
+          <div><h2>Votre projet</h2><p class="cta-description">Logiciel, prototype ou recherche acoustique : parlons de ce dont vous avez besoin.</p></div>
+          <a href="contact.html" class="cta-button">Nous joindre</a>
         </section>
       </div>
     </main>
 
-    <!-- ── FOOTER ─────────────────────────────────────────── -->
     <footer class="footer">
       <div class="footer-inner">
-        <p>© 2026 IREM. Tous droits réservés.</p>
-        <p data-contact="address">Montréal, Québec, Canada</p>
-        <p>
-          <a href="privacy-policy.html" class="footer-link"
-            >Politique de confidentialité</a
-          >
-          <span class="footer-separator">|</span>
-          <a href="terms-of-service.html" class="footer-link"
-            >Conditions d'utilisation</a
-          >
-        </p>
+        <div class="footer-brand">
+          <a href="index.html" class="logo-name"><img src="../public/media/images/shared/branding/IREM_Logo.svg?v=81c1b0518d" alt="IREM" width="303" height="303"></a>
+          <p>Institut de Recherche et Exploration Musicale</p>
+          <p data-contact="address">Montréal, Québec, Canada</p>
+        </div>
+        <div class="footer-links">
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Politique de confidentialité</a>
+          <a href="terms-of-service.html">Conditions d’utilisation</a>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 IREM</p>
+          <div class="nav-controls">
+            <a class="language-link" href="../about.html" lang="en" hreflang="en" aria-label="English" title="English">EN</a>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Mode sombre" aria-pressed="false" hidden><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+          </div>
+        </div>
       </div>
     </footer>
 
     <script src="../js/config.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js?v=394c804202"></script>
   </body>
 </html>
